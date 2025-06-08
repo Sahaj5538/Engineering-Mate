@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiple Integrals</title>
+</head>
+<body>
+    <h1>Double Integrals</h1>
+    <h2>Evaluation:</h2>
+    <p>Double integrals are used to find the volume under a surface (z = f(x, y)) over a region (R) in the (xy)-plane. The double integral is denoted as:</p>
+    <p>∬<sub>R</sub> f(x,y) dA</p>
+    <p>where (dA) can be (dx dy) or (dy dx).</p>
+
+    <p>To evaluate a double integral, we perform iterated integration. For example, if (R) is defined by (a ≤ x ≤ b) and (g₁(x) ≤ y ≤ g₂(x)), then:</p>
+
+    <p>∬<sub>R</sub> f(x,y) dA = ∫<sub>a</sub><sup>b</sup> ∫<sub>g₁(x)</sub><sup>g₂(x)</sup> f(x,y) dy dx</p>
+
+    <h3>Example:</h3>
+    <p>Evaluate ∬<sub>R</sub> (x + y) dA, where (R) is the region bounded by (x = 0), (x = 2), (y = 0), and (y = 1).</p>
+
+    <p>∬<sub>R</sub> (x+y) dA = ∫<sub>0</sub><sup>2</sup> ∫<sub>0</sub><sup>1</sup> (x+y) dy dx</p>
+
+    <p>First, integrate with respect to (y):</p>
+    <p>∫<sub>0</sub><sup>1</sup> (x+y) dy = [xy + (1/2)y²]<sub>0</sub><sup>1</sup> = x + 1/2</p>
+
+    <p>Now, integrate with respect to (x):</p>
+    <p>∫<sub>0</sub><sup>2</sup> (x + 1/2) dx = [(1/2)x² + (1/2)x]<sub>0</sub><sup>2</sup> = 2 + 1 = 3</p>
+
+    <p>Thus, ∬<sub>R</sub> (x + y) dA = 3.</p>
+
+    <h2>Changing Order of Integration:</h2>
+    <p>Sometimes, it's easier to evaluate a double integral by changing the order of integration. This involves rewriting the limits of integration.</p>
+
+    <h3>Example:</h3>
+    <p>Evaluate ∫<sub>0</sub><sup>1</sup> ∫<sub>x</sub><sup>1</sup> e<sup>y²</sup> dy dx.</p>
+
+    <p>Since it's difficult to integrate e<sup>y²</sup> with respect to (y), we change the order of integration. The region (R) is defined by (0 ≤ x ≤ 1) and (x ≤ y ≤ 1). Rewriting this, we have (0 ≤ y ≤ 1) and (0 ≤ x ≤ y).</p>
+
+    <p>∫<sub>0</sub><sup>1</sup> ∫<sub>x</sub><sup>1</sup> e<sup>y²</sup> dy dx = ∫<sub>0</sub><sup>1</sup> ∫<sub>0</sub><sup>y</sup> e<sup>y²</sup> dx dy</p>
+
+    <p>Now, integrate with respect to (x):</p>
+    <p>∫<sub>0</sub><sup>y</sup> e<sup>y²</sup> dx = y e<sup>y²</sup></p>
+
+    <p>Next, integrate with respect to (y):</p>
+    <p>∫<sub>0</sub><sup>1</sup> y e<sup>y²</sup> dy</p>
+    <p>Let u = y² ⇒ du = 2y dy ⇒ (1/2) du = y dy.</p>
+
+    <p>Thus, the integral becomes (1/2) ∫<sub>0</sub><sup>1</sup> e<sup>u</sup> du = (1/2)(e<sup>1</sup> - e<sup>0</sup>) = (1/2)(e - 1).</p>
+
+    <p>Thus, ∫<sub>0</sub><sup>1</sup> ∫<sub>x</sub><sup>1</sup> e<sup>y²</sup> dy dx = (1/2)(e - 1).</p>
+
+    <h2>Variable Changes (Cartesian to Polar):</h2>
+    <p>When integrating over regions with circular symmetry, it's often easier to use polar coordinates:</p>
+    <ul>
+        <li>x = r cos(θ)</li>
+        <li>y = r sin(θ)</li>
+    </ul>
+    <p>and dA = r dr dθ.</p>
+
+    <h3>Example:</h3>
+    <p>Evaluate ∬<sub>R</sub> e<sup>-(x² + y²)</sup> dA, where (R) is the disk x² + y² ≤ 4.</p>
+
+    <p>In polar coordinates, x² + y² = r², and R is 0 ≤ r ≤ 2, 0 ≤ θ ≤ 2π.</p>
+
+    <p>Thus, ∬<sub>R</sub> e<sup>-(x² + y²)</sup> dA = ∫<sub>0</sub><sup>2π</sup> ∫<sub>0</sub><sup>2</sup> e<sup>-r²</sup> r dr dθ.</p>
+
+    <p>First, integrate with respect to (r):</p>
+    <p>∫<sub>0</sub><sup>2</sup> e<sup>-r²</sup> r dr = -(1/2)[e<sup>-r²</sup>]<sub>0</sub><sup>2</sup> = (1/2)(1 - e<sup>-4</sup>)</p>
+
+    <p>Now, integrate with respect to (θ):</p>
+    <p>∫<sub>0</sub><sup>2π</sup> (1/2)(1 - e<sup>-4</sup>) dθ = π(1 - e<sup>-4</sup>)</p>
+
+    <p>Thus, ∬<sub>R</sub> e<sup>-(x² + y²)</sup> dA = π(1 - e<sup>-4</sup>).</p>
+
+    <h1>Triple Integrals</h1>
+    <h2>Evaluation:</h2>
+    <p>Triple integrals are used to find the volume of a region (V) in 3D space or to integrate a function f(x, y, z) over (V). The triple integral is denoted as:</p>
+
+    <p>∭<sub>V</sub> f(x,y,z) dV</p>
+    <p>where dV can be (dx dy dz), (dy dx dz), etc.</p>
+
+    <h3>Example:</h3>
+    <p>Evaluate ∭<sub>V</sub> x dV, where (V) is the region bounded by (x = 0), (x = 1), (y = 0), (y = 2), (z = 0), (z = 3).</p>
+
+    <p>∭<sub>V</sub> x dV = ∫<sub>0</sub><sup>1</sup> ∫<sub>0</sub><sup>2</sup> ∫<sub>0</sub><sup>3</sup> x dz dy dx</p>
+
+    <p>First, integrate with respect to (z):</p>
+    <p>∫<sub>0</sub><sup>3</sup> x dz = 3x</p>
+
+    <p>Now, integrate with respect to (y):</p>
+    <p>∫<sub>0</sub><sup>2</sup> 3x dy = 6x</p>
+
+    <p>Finally, integrate with respect to (x):</p>
+    <p>∫<sub>0</sub><sup>1</sup> 6x dx = 3</p>
+
+    <p>Thus, ∭<sub>V</sub> x dV = 3.</p>
+
+    <h2>Changes of Variables:</h2>
+    <h3>Cylindrical Coordinates:</h3>
+    <ul>
+        <li>x = r cos(θ)</li>
+        <li>y = r sin(θ)</li>
+        <li>z = z</li>
+    </ul>
+    <p>and dV = r dz dr dθ.</p>
+
+    <h3>Spherical Coordinates:</h3>
+    <ul>
+        <li>x = ρ sin(ϕ) cos(θ)</li>
+        <li>y = ρ sin(ϕ) sin(θ)</li>
+        <li>z = ρ cos(ϕ)</li>
+    </ul>
+    <p>and dV = ρ² sin(ϕ) dρ dϕ dθ.</p>
+
+    <h3>Example (Spherical Coordinates):</h3>
+    <p>Evaluate ∭<sub>V</sub> e<sup>-(x² + y² + z²)<sup>3/2</sup></sup> dV, where V is x² + y² + z² ≤ 1.</p>
+
+    <p>In spherical coordinates:</p>
+    <p>∭<sub>V</sub> e<sup>-(ρ²)<sup>3/2</sup></sup> dV = ∫<sub>0</sub><sup>2π</sup> ∫<sub>0</sub><sup>π</sup> ∫<sub>0</sub><sup>1</sup> e<sup>-ρ³</sup> ρ² sin(ϕ) dρ dϕ dθ</p>
+
+    <p>First, integrate with respect to (ρ):</p>
+    <p>∫<sub>0</sub><sup>1</sup> e<sup>-ρ³</sup> ρ² dρ = (1/3)(1 - e<sup>-1</sup>)</p>
+
+    <p>Now, integrate with respect to (ϕ):</p>
+    <p>∫<sub>0</sub><sup>π</sup> (1/3)(1 - e<sup>-1</sup>) sin(ϕ) dϕ = (2/3)(1 - e<sup>-1</sup>)</p>
+
+    <p>Finally, integrate with respect to (θ):</p>
+    <p>∫<sub>0</sub><sup>2π</sup> (2/3)(1 - e<sup>-1</sup>) dθ = (4π/3)(1 - e<sup>-1</sup>)</p>
+
+    <p>Thus, ∭<sub>V</sub> e<sup>-(x² + y² + z²)<sup>3/2</sup></sup> dV = (4π/3)(1 - e<sup>-1</sup>).</p>
+
+    <h1>Applications</h1>
+    <ul>
+        <li>Finding Areas: A = ∬<sub>R</sub> dA</li>
+        <li>Finding Volumes: V = ∭<sub>V</sub> dV</li>
+        <li>Mass and Center of Mass: m = ∭<sub>V</sub> ρ(x, y, z) dV, where ρ is the density function.</li>
+        <li>Moments of Inertia: I = ∭<sub>V</sub> r² ρ(x, y, z) dV, where r is the distance from the axis of rotation.</li>
+    </ul>
+</body>
+</html>

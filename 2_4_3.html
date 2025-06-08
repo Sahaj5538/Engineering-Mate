@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relational Model and Storage & Indexing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #34495e;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        code, pre {
+            background-color: #f4f4f4;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Relational Model and Storage & Indexing</h1>
+
+    <section>
+        <h2>Relational Model</h2>
+
+        <h3>Introduction to Relational Model</h3>
+        <p>The relational model represents the database as a collection of relations (tables). Each relation consists of tuples (rows) and attributes (columns).</p>
+
+        <h3>Basic Structure</h3>
+        <ul>
+            <li><strong>Relation:</strong> A table with columns and rows.</li>
+            <li><strong>Tuple:</strong> A single row in a relation.</li>
+            <li><strong>Attribute:</strong> A named column of a relation.</li>
+            <li><strong>Domain:</strong> A set of allowed values for an attribute.</li>
+        </ul>
+
+        <h3>Database Schema</h3>
+        <p>A schema is the logical structure of the database, including the definition of tables, columns, types, and relationships.</p>
+
+        <h3>Keys</h3>
+        <ul>
+            <li><strong>Primary Key:</strong> A field (or fields) that uniquely identifies each tuple in a table.</li>
+            <li><strong>Candidate Key:</strong> A set of fields that could serve as a primary key.</li>
+            <li><strong>Foreign Key:</strong> A field in one table that links to the primary key in another table.</li>
+            <li><strong>Super Key:</strong> A set of one or more attributes that uniquely identify a tuple.</li>
+        </ul>
+
+        <h3>Relational Algebra</h3>
+        <p>Relational algebra is a procedural query language that works on the relational model. Main operations include:</p>
+        <ul>
+            <li><strong>Selection (σ):</strong> Selects tuples that satisfy a given predicate.</li>
+            <li><strong>Projection (π):</strong> Selects certain columns from a relation.</li>
+            <li><strong>Union (⋃):</strong> Combines the tuples of two relations.</li>
+            <li><strong>Set Difference (-):</strong> Finds tuples in one relation but not in another.</li>
+            <li><strong>Cartesian Product (×):</strong> Combines every tuple of one relation with every tuple of another relation.</li>
+            <li><strong>Rename (ρ):</strong> Renames the relation or its attributes.</li>
+            <li><strong>Join (⨝):</strong> Combines related tuples from two relations.</li>
+        </ul>
+
+        <h3>Relational Calculus</h3>
+        <p>Relational calculus is a non-procedural query language where users specify what they want, not how to compute it.</p>
+        <ul>
+            <li><strong>Tuple Relational Calculus (TRC)</strong></li>
+            <li><strong>Domain Relational Calculus (DRC)</strong></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Storage and Indexing</h2>
+
+        <h3>File Organizations and Indexing</h3>
+        <p>File organization refers to the way data is stored in files and how records are organized on storage devices.</p>
+
+        <h3>Overview of Indexes</h3>
+        <p>Indexes improve the speed of data retrieval operations on a database table at the cost of additional storage space and maintenance time.</p>
+
+        <h3>Types of Indexes</h3>
+        <ul>
+            <li><strong>Primary Index:</strong> An index on a set of fields that includes the primary key.</li>
+            <li><strong>Secondary Index:</strong> An index on non-primary key fields.</li>
+            <li><strong>Clustered Index:</strong> Alters the way records are stored in the database (sorted according to the index).</li>
+            <li><strong>Non-clustered Index:</strong> Creates a separate structure from the data table.</li>
+        </ul>
+
+        <h3>Index Data Structures</h3>
+        <ul>
+            <li><strong>B+ Trees:</strong> Balanced tree data structure that maintains sorted data and allows searches, sequential access, insertions, and deletions in logarithmic time.</li>
+            <li><strong>Hash Indexing:</strong> Uses a hash table to locate a data record given its search key.</li>
+        </ul>
+
+        <h3>Tree-Structured Indexing</h3>
+        <p>Tree-structured indexes, like B-trees and B+ trees, are used to maintain sorted order of data and allow fast searches, insertions, deletions, and sequential access.</p>
+
+        <h3>Hash-Based Indexing</h3>
+        <p>Hash-based indexing uses a hash function to compute the address of a page where a record might be stored.</p>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked Lists</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Linked Lists</h1>
+
+    <section>
+        <h2>Introduction to Lists</h2>
+
+        <h3>Dynamic Memory Allocation</h3>
+        <p>Dynamic Memory Allocation allows the program to allocate memory during runtime as needed, providing flexibility in handling varying data sizes. Linked Lists use dynamic memory to create nodes as required, optimizing memory use.</p>
+
+        <h3>Self-referential Structures</h3>
+        <p>A self-referential structure is a structure that contains a pointer to another structure of the same type. In linked lists, each node typically contains data and a pointer to the next node.</p>
+
+    </section>
+
+    <section>
+        <h2>Single Linked List (SLL)</h2>
+
+        <h3>Advantages and Disadvantages of SLL</h3>
+        <ul>
+            <li><strong>Advantages:</strong> 
+                <ul>
+                    <li>Dynamic size</li>
+                    <li>Efficient insertions/deletions</li>
+                    <li>Better memory utilization</li>
+                </ul>
+            </li>
+            <li><strong>Disadvantages:</strong> 
+                <ul>
+                    <li>Extra memory for pointer storage</li>
+                    <li>Sequential access only (no random access)</li>
+                    <li>More complex operations compared to arrays</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>SLL vs Arrays</h3>
+        <ul>
+            <li><strong>Arrays</strong> require contiguous memory, whereas <strong>Linked Lists</strong> can use scattered memory blocks.</li>
+            <li>Arrays allow random access using indices; Linked Lists allow sequential access only.</li>
+            <li>Insertion/deletion is expensive in arrays but efficient in linked lists.</li>
+        </ul>
+
+        <h3>Memory Representation</h3>
+        <p>In a Single Linked List, each node contains:
+            <ul>
+                <li>Data field: stores the data</li>
+                <li>Next pointer: points to the next node in the list</li>
+            </ul>
+        The last node points to <code>NULL</code>, indicating the end of the list.
+        </p>
+
+    </section>
+
+    <section>
+        <h2>Operations on Linked Lists</h2>
+
+        <h3>Insertion</h3>
+        <p>Inserting a new node can be done at:
+            <ul>
+                <li>The beginning of the list</li>
+                <li>At a specific position</li>
+                <li>At the end of the list</li>
+            </ul>
+        The pointers are adjusted to accommodate the new node.
+        </p>
+
+        <h3>Deletion</h3>
+        <p>Deletion involves removing a node from:
+            <ul>
+                <li>The beginning</li>
+                <li>A specified position</li>
+                <li>The end</li>
+            </ul>
+        Care must be taken to properly update the links and free memory.
+        </p>
+
+        <h3>Display</h3>
+        <p>To display the list, we traverse from the head node, following the next pointers, and print each node’s data until reaching <code>NULL</code>.</p>
+
+        <h3>Search</h3>
+        <p>Searching in a linked list involves traversing node by node and comparing the target value with each node’s data field.</p>
+
+    </section>
+
+    <section>
+        <h2>Applications</h2>
+
+        <h3>Implementation of Stack using Linked List</h3>
+        <p>A stack can be implemented using a linked list where:
+            <ul>
+                <li><code>push</code> operation adds a new node at the beginning (top of the stack)</li>
+                <li><code>pop</code> operation removes the node from the beginning</li>
+            </ul>
+        </p>
+
+        <h3>Implementation of Queue using Linked List</h3>
+        <p>A queue can be implemented using a linked list where:
+            <ul>
+                <li><code>enqueue</code> operation adds a new node at the rear</li>
+                <li><code>dequeue</code> operation removes a node from the front</li>
+            </ul>
+        </p>
+
+    </section>
+
+    <section>
+        <h2>Other Types of Linked Lists</h2>
+
+        <h3>Circular Linked List</h3>
+        <p>In a Circular Linked List, the last node points back to the first node, making the list circular. It can be singly or doubly linked. It is useful for applications that require a cyclic traversal.</p>
+
+        <h3>Doubly Linked List</h3>
+        <p>A Doubly Linked List has two pointers in each node:
+            <ul>
+                <li>One pointing to the next node</li>
+                <li>One pointing to the previous node</li>
+            </ul>
+        It allows traversal in both forward and backward directions but uses extra memory for the additional pointer.
+        </p>
+
+    </section>
+
+</body>
+</html>

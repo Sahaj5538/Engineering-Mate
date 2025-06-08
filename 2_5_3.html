@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Central Processing Unit Organization and Computer Arithmetic</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.7;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    section {
+      margin-bottom: 30px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .example {
+      background: #e8f4fa;
+      border-left: 4px solid #3498db;
+      padding: 10px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+<h1>UNIT III: Central Processing Unit Organization and Computer Arithmetic</h1>
+
+<section>
+  <h2>Central Processing Unit Organization</h2>
+
+  <h3>General Register Organization</h3>
+  <p>In general register organization, all CPU operations are performed using multiple processor registers. It increases speed by avoiding frequent memory access.</p>
+  <ul>
+    <li>ALU connected to a set of registers and buses.</li>
+    <li>Registers include accumulator, data register, address register, etc.</li>
+    <li>Instructions specify register operands.</li>
+  </ul>
+
+  <div class="example">
+    <strong>Example:</strong>  
+    <em>ADD R1, R2 → R1 = R1 + R2</em>  
+    (Adds contents of R2 to R1)
+  </div>
+
+  <h3>Stack Organization</h3>
+  <p>Stack is a last-in-first-out (LIFO) memory structure used for expression evaluation and function call management.</p>
+  <ul>
+    <li>Stack Pointer (SP) points to the top of the stack.</li>
+    <li>Operations: PUSH (insert), POP (remove).</li>
+  </ul>
+
+  <div class="example">
+    <strong>Example:</strong>  
+    <em>PUSH X → SP = SP - 1; Stack[SP] = X</em>  
+    (Pushes value X onto the stack.)
+  </div>
+
+  <h3>Instruction Formats</h3>
+  <p>Instruction format specifies the layout of bits that form an instruction. Typical fields:</p>
+  <ul>
+    <li>Opcode: Operation to be performed</li>
+    <li>Operand: Source/target data or register address</li>
+    <li>Address: Memory address if required</li>
+  </ul>
+
+  <h3>Addressing Modes</h3>
+  <p>Defines how the effective address of the operand is calculated. Types:</p>
+  <ul>
+    <li><strong>Immediate:</strong> Operand is part of instruction.</li>
+    <li><strong>Direct:</strong> Address field contains the effective address.</li>
+    <li><strong>Indirect:</strong> Address field points to the address holding the effective address.</li>
+    <li><strong>Indexed:</strong> Address = Base + Index Register.</li>
+  </ul>
+
+  <h3>Data Transfer and Manipulation</h3>
+  <p>Data transfer instructions move data between memory, registers, and I/O devices. Manipulation instructions perform operations like AND, OR, SHIFT, ADD, etc.</p>
+
+  <h3>Program Control</h3>
+  <p>Program control instructions alter the flow of execution, including branch, jump, call, and return operations.</p>
+
+  <div class="example">
+    <strong>Example:</strong>  
+    <em>JMP 300</em>  
+    (Changes PC to 300.)
+  </div>
+
+  <h3>Reduced Instruction Set Computer (RISC)</h3>
+  <p>RISC architecture simplifies instruction sets to achieve higher performance. Characteristics:</p>
+  <ul>
+    <li>Simple instructions</li>
+    <li>Fixed instruction size</li>
+    <li>Load/store architecture</li>
+    <li>Fewer addressing modes</li>
+  </ul>
+
+  <div class="example">
+    <strong>Example:</strong>  
+    <em>RISC example CPU: ARM, MIPS</em>
+  </div>
+</section>
+
+<section>
+  <h2>Computer Arithmetic</h2>
+
+  <h3>Addition and Subtraction</h3>
+  <p>Binary addition and subtraction use full-adders and subtractors.</p>
+  <ul>
+    <li><strong>Binary Addition:</strong> Same as decimal but carries when sum ≥ 2.</li>
+    <li><strong>Binary Subtraction:</strong> Uses complement methods (1's or 2's complement).</li>
+  </ul>
+
+  <div class="example">
+    <strong>Example:</strong>  
+    <em>1011 + 1101 = 11000</em>
+  </div>
+
+  <h3>Multiplication Algorithms</h3>
+  <p>Binary multiplication is done by successive addition and shifting. Methods:</p>
+  <ul>
+    <li>Booth’s Multiplication Algorithm</li>
+    <li>Bit-pair recoding</li>
+  </ul>
+
+  <div class="example">
+    <strong>Example:</strong>  
+    <em>Multiply 101 by 11 → Shift and add partial products.</em>
+  </div>
+
+  <h3>Floating-Point Arithmetic Operations</h3>
+  <p>Floating-point numbers are represented using mantissa and exponent. IEEE 754 format is commonly used.</p>
+  <ul>
+    <li>Normalization required after operations.</li>
+    <li>Handling rounding and overflow carefully.</li>
+  </ul>
+
+  <h3>BCD Adder</h3>
+  <p>BCD (Binary Coded Decimal) Adder is used to add two BCD numbers.</p>
+  <ul>
+    <li>If sum > 9, add 6 to correct.</li>
+    <li>Required to adjust binary results to valid BCD codes.</li>
+  </ul>
+
+  <div class="example">
+    <strong>Example:</strong>  
+    <em>9 (1001) + 8 (1000) = 17 (0001 0111) → Add 6 (0110) to get 0010 0011 (23 in BCD)</em>
+  </div>
+
+</section>
+
+</body>
+</html>

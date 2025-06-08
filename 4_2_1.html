@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neural Networks and Deep Learning - Neural Net Fundamentals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            margin: 20px;
+            line-height: 1.8;
+        }
+        h1, h2 {
+            color: #2d3436;
+        }
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        ul {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Neural Networks and Deep Learning</h1>
+
+<section>
+    <h2>Introduction to Neural Networks</h2>
+    <p><strong>Neural Networks</strong> are a subset of Machine Learning and are at the heart of Deep Learning algorithms. Inspired by the structure of the human brain, a neural network is composed of layers of interconnected nodes called neurons, where each node represents a mathematical function.</p>
+</section>
+
+<section>
+    <h2>Basic Structure of a Neural Network</h2>
+    <ul>
+        <li><strong>Input Layer:</strong> Receives initial data to be processed.</li>
+        <li><strong>Hidden Layers:</strong> Intermediate layers that transform the inputs into something the output layer can use. Neural networks can have multiple hidden layers (deep networks).</li>
+        <li><strong>Output Layer:</strong> Produces the final output, like a class label or a numeric value.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Neuron (Node) Fundamentals</h2>
+    <p>Each neuron in a network receives inputs, applies a weight to them, sums them up, and passes them through an <strong>activation function</strong> to determine the output.</p>
+    <p><strong>Mathematical representation:</strong> <br> <code>Output = Activation(Sum(Weight * Input) + Bias)</code></p>
+
+    <h3>Key Components:</h3>
+    <ul>
+        <li><strong>Weights:</strong> Determine the importance of each input.</li>
+        <li><strong>Bias:</strong> Helps shift the activation function curve.</li>
+        <li><strong>Activation Function:</strong> Introduces non-linearity to help the network learn complex patterns (e.g., Sigmoid, ReLU, Tanh).</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Forward Propagation</h2>
+    <p>Forward propagation is the process by which input data is passed through the network layer by layer, resulting in an output prediction. The outputs are calculated based on the current weights and biases.</p>
+</section>
+
+<section>
+    <h2>Loss Function</h2>
+    <p>The loss function measures how far the network’s prediction is from the actual label. Common loss functions include Mean Squared Error (MSE) for regression and Cross-Entropy Loss for classification.</p>
+</section>
+
+<section>
+    <h2>Backpropagation</h2>
+    <p>Backpropagation is the learning algorithm for training neural networks. It adjusts the weights and biases to minimize the loss function by computing the gradient (error) and updating parameters using techniques like Gradient Descent.</p>
+
+    <h3>Steps:</h3>
+    <ul>
+        <li>Compute the loss (error) between actual and predicted outputs.</li>
+        <li>Propagate the error backward through the network.</li>
+        <li>Update weights and biases using optimization algorithms.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Deep Learning</h2>
+    <p><strong>Deep Learning</strong> refers to neural networks with many hidden layers. These deep architectures enable machines to learn complex features and representations directly from data, making them powerful for applications like image recognition, natural language processing, and autonomous vehicles.</p>
+</section>
+
+<section>
+    <h2>Applications of Neural Networks</h2>
+    <ul>
+        <li>Image and speech recognition</li>
+        <li>Natural language processing (NLP)</li>
+        <li>Recommendation systems</li>
+        <li>Medical diagnosis</li>
+        <li>Autonomous vehicles</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Conclusion</h2>
+    <p>Neural Networks form the foundation of deep learning and artificial intelligence advancements. By mimicking the human brain’s structure and functioning, they have transformed numerous industries and opened new possibilities in the field of intelligent automation and decision-making.</p>
+</section>
+
+</body>
+</html>

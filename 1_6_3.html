@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AC Circuits Overview</title>
+</head>
+<body>
+    <h1>AC Circuits</h1>
+
+    <h2>Sinusoidal Signals</h2>
+    <h3>1. Representation in Time Domain</h3>
+    <p>v(t) = V<sub>m</sub> sin(&omega;t + &phi;)</p>
+    <ul>
+        <li>V<sub>m</sub> = Peak value</li>
+        <li>&omega; = Angular frequency = 2&pi;f (rad/s)</li>
+        <li>f = Frequency in Hz</li>
+        <li>&phi; = Phase angle</li>
+        <li>t = Time in seconds</li>
+    </ul>
+
+    <h3>2. Representation in Phasor Domain</h3>
+    <p>Phasor: V = V<sub>m</sub>&angle;&phi;</p>
+    <p>Phasors simplify AC steady-state analysis by removing time dependence.</p>
+
+    <h2>Values: Average and RMS</h2>
+    <h3>1. Average Value</h3>
+    <p>V<sub>avg</sub> = (2V<sub>m</sub>) / &pi;</p>
+    <h3>2. RMS Value</h3>
+    <p>V<sub>rms</sub> = V<sub>m</sub> / &radic;2</p>
+    <p>Similarly, I<sub>rms</sub> = I<sub>m</sub> / &radic;2</p>
+
+    <h2>Phasors and Sinusoidal Steady-State Analysis</h2>
+    <ul>
+        <li>Resistor (R): V = IR (same phase)</li>
+        <li>Inductor (L): V = j&omega;LI (current lags voltage by 90&deg;)</li>
+        <li>Capacitor (C): V = I / (j&omega;C) (current leads voltage by 90&deg;)</li>
+    </ul>
+    <p>Impedance (Z):<br>
+        Z<sub>R</sub> = R, Z<sub>L</sub> = j&omega;L, Z<sub>C</sub> = 1 / (j&omega;C)</p>
+
+    <h2>Power in AC Circuits</h2>
+    <h3>1. Real Power (P)</h3>
+    <p>P = V<sub>rms</sub> I<sub>rms</sub> cos&phi;</p>
+
+    <h3>2. Reactive Power (Q)</h3>
+    <p>Q = V<sub>rms</sub> I<sub>rms</sub> sin&phi;</p>
+
+    <h3>3. Apparent Power (S)</h3>
+    <p>S = V<sub>rms</sub> I<sub>rms</sub></p>
+    <p>Relationship: S = &radic;(P<sup>2</sup> + Q<sup>2</sup>)</p>
+
+    <h3>4. Power Factor (pf)</h3>
+    <p>Power Factor = cos&phi;</p>
+    <p>- Leading pf: Capacitive load<br>
+       - Lagging pf: Inductive load</p>
+
+    <h2>AC Circuit Analysis</h2>
+    <h3>1. RL Circuit</h3>
+    <p>Impedance: Z = R + j&omega;L</p>
+    <p>Phase: Current lags voltage.</p>
+
+    <h3>2. RC Circuit</h3>
+    <p>Impedance: Z = R - j / (&omega;C)</p>
+    <p>Phase: Current leads voltage.</p>
+
+    <h3>3. RLC Circuit</h3>
+    <h4>(a) Series RLC</h4>
+    <p>Impedance: Z = R + j(&omega;L - 1/(&omega;C))</p>
+    <p>Resonance: &omega;L = 1/(&omega;C)</p>
+
+    <h4>(b) Parallel RLC</h4>
+    <p>Admittance: Y = 1/Z</p>
+
+    <h2>Resonance</h2>
+    <h3>1. Series Resonance</h3>
+    <p>Occurs when &omega;L = 1/(&omega;C)</p>
+    <p>Resonant frequency: f<sub>r</sub> = 1 / (2&pi;&radic;LC)</p>
+    <p>At resonance, Z = R (minimum) and current is maximum.</p>
+
+    <h3>2. Parallel Resonance</h3>
+    <p>Occurs when reactive admittance is zero.</p>
+    <p>At resonance, impedance is maximum, and current drawn is minimum.</p>
+
+    <h2>Summary Diagram (Concept Map)</h2>
+    <table border="1">
+        <tr>
+            <th>Topic</th>
+            <th>Formula/Key Concept</th>
+        </tr>
+        <tr>
+            <td>Sinusoid</td>
+            <td>v(t) = V<sub>m</sub>sin(&omega;t + &phi;)</td>
+        </tr>
+        <tr>
+            <td>RMS Value</td>
+            <td>V<sub>rms</sub> = V<sub>m</sub> / &radic;2</td>
+        </tr>
+        <tr>
+            <td>Real Power (P)</td>
+            <td>P = VIcos&phi;</td>
+        </tr>
+        <tr>
+            <td>Reactive Power (Q)</td>
+            <td>Q = VIsin&phi;</td>
+        </tr>
+        <tr>
+            <td>Apparent Power (S)</td>
+            <td>S = VI</td>
+        </tr>
+        <tr>
+            <td>Power Factor</td>
+            <td>cos&phi;</td>
+        </tr>
+        <tr>
+            <td>Resonant Frequency</td>
+            <td>f<sub>r</sub> = 1 / (2&pi;&radic;LC)</td>
+        </tr>
+        <tr>
+            <td>RL Impedance</td>
+            <td>Z = R + j&omega;L</td>
+        </tr>
+        <tr>
+            <td>RC Impedance</td>
+            <td>Z = R - j / (&omega;C)</td>
+        </tr>
+        <tr>
+            <td>RLC Impedance</td>
+            <td>Z = R + j(&omega;L - 1/(&omega;C))</td>
+        </tr>
+    </table>
+</body>
+</html>
+

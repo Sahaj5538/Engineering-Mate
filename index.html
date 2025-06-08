@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Mate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+        <!-- Firebase CDN -->
+    <!-- Firebase Core + Auth + Firestore (Compat Version) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script> <!-- 🔥 THIS IS REQUIRED -->
+
+    <script>
+    // Firebase Config
+    const firebaseConfig = {
+        apiKey: "AIzaSyChe3iXivFsQVyczw45lrxfuelsrIzNLhI",
+        authDomain: "engineering-mate.firebaseapp.com",
+        projectId: "engineering-mate",
+        storageBucket: "engineering-mate.appspot.com",
+        messagingSenderId: "380143637559",
+        appId: "1:380143637559:web:fe4567ab14ea1c44e7dbb2",
+        measurementId: "G-HXTFQR1RM6"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    const auth = firebase.auth();     // Firebase Auth
+    const db = firebase.firestore();  // Firestore 🔥
+    </script>
+
+</head>
+<body>
+    <div id="landingPage" class="container">
+        <header style="background-color: #3498db; color: white; padding: 15px 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); display: flex; justify-content: space-between; align-items: center;">
+  
+            <!-- Logo Section -->
+            <div class="logo" style="font-size: 20px; font-weight: bold;">
+              <i class="fas fa-graduation-cap"></i> <span>Engineering Mate</span>
+            </div>
+          
+            <!-- Buttons Wrapper for Flex and Spacing -->
+            <div style="display: flex; gap: 10px;">
+              <button class="btn" id="signupbtn" style="width: auto; padding: 8px 15px;">Sign Up</button>
+              <button class="btn" id="landingLoginBtn" style="width: auto; padding: 8px 15px;">Login</button>
+            </div>
+          </header>
+          
+        <main style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px 20px; text-align: center;">
+            <h1 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 10px; margin-top: 32px;">Welcome to Engineering Mate</h1>
+            <p style="font-size: 1.1rem; margin-bottom: 35px;">Your one-stop platform for engineering education</p>
+            <section style="max-width: 700px; margin: 0 auto 32px auto;">
+                <h2 style="font-size: 1.7rem; margin-bottom: 12px;">About Engineering Mate</h2>
+                <p style="margin-bottom: 24px;">Engineering Mate is a comprehensive learning platform designed specifically for engineering students. Our platform offers a structured curriculum covering all four years of engineering studies with detailed course materials, video lectures, and interactive quizzes to help you master engineering concepts.</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 18px;">
+                    <div style="background: #fff; border-radius: 12px; padding: 18px 10px; box-shadow: var(--shadow); text-align: center;">
+                        <i class="fas fa-book" style="font-size: 32px; color: #3498db;"></i>
+                        <h3 style="margin: 10px 0 5px; font-size: 1.05rem;">Comprehensive Curriculum</h3>
+                        <p style="font-size: 0.93rem; color: #333;">Access detailed course materials for all engineering subjects across four years.</p>
+                    </div>
+                    <div style="background: #fff; border-radius: 12px; padding: 18px 10px; box-shadow: var(--shadow); text-align: center;">
+                        <i class="fas fa-video" style="font-size: 32px; color: #3498db;"></i>
+                        <h3 style="margin: 10px 0 5px; font-size: 1.05rem;">Video Lectures</h3>
+                        <p style="font-size: 0.93rem; color: #333;">Learn from high-quality video lectures for each subject.</p>
+                    </div>
+                    <div style="background: #fff; border-radius: 12px; padding: 18px 10px; box-shadow: var(--shadow); text-align: center;">
+                        <i class="fas fa-list-ol" style="font-size: 32px; color: #3498db;"></i>
+                        <h3 style="margin: 10px 0 5px; font-size: 1.05rem;">Interactive Quizzes</h3>
+                        <p style="font-size: 0.93rem; color: #333;">Test your knowledge with quizzes designed for each engineering subject.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Login Page -->
+    <div class="login-container hidden" id="loginPage">
+        <div class="login-box">
+            <h1 class="login-title"><i class="fas fa-graduation-cap"></i> Engineering Mate</h1>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Sign Up Page -->
+    <div class="login-container hidden" id="signupPage">
+        <div class="login-box">
+        <h1 class="login-title"><i class="fas fa-graduation-cap"></i> Sign Up</h1>
+        <form id="signupForm">
+            <div class="input-group">
+            <input type="text" id="signupUsername" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+            <input type="password" id="signupPassword" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+        <p style="text-align: center;">Already have an account? <a href="#" id="backToLogin">Login</a></p>
+        </div>
+    </div>
+  
+  
+    <!-- Main Dashboard -->
+    <div class="container hidden" id="dashboardPage">
+        <header>
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Engineering Mate</span>
+            </div>
+            <div class="user-profile">
+                <button id="loginBtn" class="btn" style="width: auto; padding: 8px 15px; display: none;">Login</button>
+                <span id="userDisplayName" style="display: none;">John Doe</span>
+                <img src="https://cdn-icons-png.flaticon.com/512/5951/5951752.png" alt="User Profile" style="display: none;">
+                <button id="logoutBtn" class="btn" style="width: auto; padding: 8px 15px;">Logout</button>
+            </div>
+        </header>
+
+        <main id="mainContent">
+            <!-- Dashboard Content -->
+            <div id="dashboardContent">
+                <div class="dashboard-greeting">
+                    <h1>Welcome back, <span id="userGreeting">John Doe</span>!</h1>
+                    <p>Continue your engineering journey.</p>
+                </div>
+
+                <h2>Engineering Courses</h2>
+                <div class="courses-grid">
+                    <!-- Year 1 -->
+                    <div class="course-card" data-year="1">
+                        <div class="course-header">
+                            <h3><i class="fas fa-book"></i> 1st Year</h3>
+                        </div>
+                        <div class="course-content">
+                            <ul class="resource-list">
+                                <li><i class='fas fa-book resource-icon'></i> Linear Algebra and Function Approximation</li>
+                                <li><i class='fas fa-book resource-icon'></i> Applied Physics</li>
+                                <li><i class='fas fa-book resource-icon'></i> Programming for Problem Solving</li>
+                                <li><i class='fas fa-book resource-icon'></i> Differential Equations and Vector Calculus</li>
+                                <li><i class='fas fa-book resource-icon'></i> Engineering Chemistry</li>
+                                <li><i class='fas fa-book resource-icon'></i> Fundamentals of Electrical Engineering</li>
+                                <li><i class='fas fa-book resource-icon'></i> Data Structures</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Year 2 -->
+                    <div class="course-card" data-year="2">
+                        <div class="course-header">
+                            <h3><i class="fas fa-laptop-code"></i> 2nd Year</h3>
+                        </div>
+                        <div class="course-content">
+                            <ul class="resource-list">
+                                <li><i class='fas fa-book resource-icon'></i> Digital Logic Design</li>
+                                <li><i class='fas fa-book resource-icon'></i> Java Programming</li>
+                                <li><i class='fas fa-book resource-icon'></i> Discrete Mathematics</li>
+                                <li><i class='fas fa-book resource-icon'></i> Database Management Systems</li>
+                                <li><i class='fas fa-book resource-icon'></i> Computer Organization</li>
+                                <li><i class='fas fa-book resource-icon'></i> Operating Systems</li>
+                                <li><i class='fas fa-book resource-icon'></i> Applied Statistics for Engineers</li>
+                                <li><i class='fas fa-book resource-icon'></i> Full Stack Web Development</li>
+                                <li><i class='fas fa-book resource-icon'></i> Design and Analysis of Algorithms</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Year 3 -->
+                    <div class="course-card" data-year="3">
+                        <div class="course-header">
+                            <h3><i class="fas fa-database"></i> 3rd Year</h3>
+                        </div>
+                        <div class="course-content">
+                            <ul class="resource-list">
+                                <li><i class='fas fa-book resource-icon'></i> Computer Networks</li>
+                                <li><i class='fas fa-book resource-icon'></i> Data Warehousing and Data Mining</li>
+                                <li><i class='fas fa-book resource-icon'></i> Artificial Intelligence</li>
+                                <li><i class='fas fa-book resource-icon'></i> Machine Learning</li>
+                                <li><i class='fas fa-book resource-icon'></i> Big Data Analytics</li>
+                                <li><i class='fas fa-book resource-icon'></i> Software Engineering</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Year 4 -->
+                    <div class="course-card" data-year="4">
+                        <div class="course-header">
+                            <h3><i class="fas fa-brain"></i> 4th Year</h3>
+                        </div>
+                        <div class="course-content">
+                            <ul class="resource-list">
+                                <li><i class='fas fa-book resource-icon'></i> Cryptography and Network Security</li>
+                                <li><i class='fas fa-book resource-icon'></i> Neural Networks and Deep Learning</li>
+                                <li><i class='fas fa-book resource-icon'></i> Fundamentals of Management and Entrepreneurship</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Year Subjects View -->
+            <div id="yearSubjectsView" class="hidden">
+                <button class="back-btn" id="backToDashboardBtn">
+                    <i class="fas fa-arrow-left"></i> Back to Dashboard
+                </button>
+                <h1 id="yearTitle">1st Year Subjects</h1>
+                <div class="subjects-list" id="subjectsList">
+                    <!-- Subjects will be inserted here by JS -->
+                </div>
+            </div>
+
+            <!-- Subject Detail View -->
+            <div id="subjectDetailView" class="hidden">
+                <button class="back-btn" id="backToSubjectsBtn">
+                    <i class="fas fa-arrow-left"></i> Back to Subjects
+                </button>
+                <h1 id="subjectTitle">Subject Name</h1>
+
+                <!-- Lessons Section -->
+                <div id="lessonsSection">
+                    <h2>Lessons</h2>
+                    <ul id="lessonsList" class="resource-list"></ul>
+                </div>
+
+                <div id="lessonDetailView" class="hidden">
+                    <h1 id="lessonTitle">Lesson Name</h1>
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="materials">Course Materials</button>
+                        <button class="tab-btn" data-tab="video">Video Lecture</button>
+                        <button class="tab-btn" data-tab="quiz">Quiz</button>
+                    </div>
+                    <div id="materialsTab" class="tab-content">
+                        <div class="material-content">
+                            <h2>Course Materials</h2>
+                            <div id="materialContent"></div>
+                        </div>
+                    </div>
+                    <div id="videoTab" class="tab-content hidden">
+                        <h2>Video Lecture</h2>
+                        <div class="video-container">
+                            <iframe id="lectureVideo" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div id="quizTab" class="tab-content hidden">
+                        <div class="quiz-container">
+                            <h2>Lesson Quiz</h2>
+                            <p>Test your knowledge</p>
+                            <div id="quizContent"></div>
+                            <div class="quiz-navigation">
+                                <button id="prevQuestionBtn" class="btn">Previous</button>
+                                <span id="questionCounter">Question 1 of 10</span>
+                                <button id="nextQuestionBtn" class="btn">Next</button>
+                            </div>
+                            <button id="submitQuizBtn" class="btn" style="margin-top: 20px; display: none;">Submit Quiz</button>
+                            <div id="quizResults" class="hidden">
+                                <h3>Quiz Results</h3>
+                                <p>You scored: <span id="quizScore">0</span>/10</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+    </body>
+</html>

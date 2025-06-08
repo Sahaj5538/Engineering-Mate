@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correlation, Regression, and Time Series Analysis</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        h1, h2, h3, h4 { color: #2c3e50; }
+        p { margin-bottom: 10px; }
+        ul { margin-bottom: 20px; }
+        code { background: #ecf0f1; padding: 2px 4px; border-radius: 3px; }
+        .important { background: #f9f9a0; padding: 5px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+<h1>Correlation, Regression, and Time Series Analysis</h1>
+
+<hr>
+
+<h2>1. Correlation</h2>
+
+<h3>Karl Pearson's Correlation Coefficient</h3>
+<p>The Karl Pearson's correlation coefficient measures the strength and direction of the linear relationship between two continuous variables.</p>
+
+<p><strong>Formula:</strong><br>
+<code>r = (Σ(x_i - mean_x)(y_i - mean_y)) / sqrt(Σ(x_i - mean_x)^2 * Σ(y_i - mean_y)^2)</code>
+</p>
+
+<h3>Properties:</h3>
+<ul>
+    <li>-1 ≤ r ≤ 1</li>
+    <li>r > 0 indicates a positive correlation.</li>
+    <li>r < 0 indicates a negative correlation.</li>
+    <li>r = 0 indicates no linear correlation.</li>
+</ul>
+
+<h3>Spearman’s Rank Correlation Coefficient</h3>
+<p>Spearman's rank correlation coefficient measures the strength and direction of the association between two ranked variables.</p>
+
+<p><strong>Formula:</strong><br>
+<code>ρ = 1 - (6 Σd_i²) / (n(n²-1))</code><br>
+where d_i = difference between the ranks of each observation
+</p>
+
+<h3>Properties:</h3>
+<ul>
+    <li>-1 ≤ ρ ≤ 1</li>
+    <li>Perfect positive correlation if ρ = 1.</li>
+    <li>Perfect negative correlation if ρ = -1.</li>
+    <li>No correlation if ρ = 0.</li>
+</ul>
+
+<h3>Problems:</h3>
+<ul>
+    <li>Calculation of r and ρ given datasets.</li>
+    <li>Interpretation of correlation values.</li>
+</ul>
+
+<hr>
+
+<h2>2. Regression</h2>
+
+<h3>Simple Linear Regression</h3>
+<p>Simple linear regression is used to model the relationship between a dependent variable (Y) and an independent variable (X) using a straight line.</p>
+
+<p><strong>Equation:</strong><br>
+<code>Y = a + bX</code><br>
+where:
+<ul>
+    <li>a = intercept</li>
+    <li>b = slope or regression coefficient</li>
+</ul>
+</p>
+
+<h3>Properties of Regression Coefficients:</h3>
+<ul>
+    <li>The correlation coefficient r is the geometric mean of the two regression coefficients.</li>
+    <li>If one regression coefficient is greater than unity, the other must be less than unity.</li>
+    <li>The sign of regression coefficients is the same as the sign of r.</li>
+</ul>
+
+<h3>Multiple Linear Regression (Three Variables)</h3>
+<p>Models the relationship between one dependent variable and two independent variables.</p>
+
+<p><strong>Equation:</strong><br>
+<code>Y = a + b1X1 + b2X2</code><br>
+where:
+<ul>
+    <li>a = intercept</li>
+    <li>b1 = regression coefficient for X1</li>
+    <li>b2 = regression coefficient for X2</li>
+</ul>
+</p>
+
+<h3>Problems:</h3>
+<ul>
+    <li>Finding regression lines and interpreting coefficients.</li>
+    <li>Prediction using the regression model.</li>
+</ul>
+
+<hr>
+
+<h2>3. Time Series Analysis</h2>
+
+<h3>Components of Time Series:</h3>
+<ul>
+    <li><strong>Trend (T):</strong> Long-term movement in the data.</li>
+    <li><strong>Seasonal Variation (S):</strong> Short-term, regular variation based on season or period.</li>
+    <li><strong>Cyclic Variation (C):</strong> Long-term oscillations or cycles.</li>
+    <li><strong>Irregular Variation (I):</strong> Random, unpredictable influences.</li>
+</ul>
+
+<h3>Models of Decomposition:</h3>
+<ul>
+    <li><strong>Additive Model:</strong> <code>Y = T + S + C + I</code></li>
+    <li><strong>Multiplicative Model:</strong> <code>Y = T × S × C × I</code></li>
+</ul>
+
+<h3>Estimation of Trend:</h3>
+
+<h4>Method of Moving Averages:</h4>
+<ul>
+    <li>Smooths data by averaging adjacent observations over a specified period.</li>
+    <li>Removes short-term fluctuations to highlight long-term trends.</li>
+</ul>
+
+<h4>Steps:</h4>
+<ul>
+    <li>Choose the period of the moving average (e.g., 3 years, 5 years).</li>
+    <li>Calculate the average of each set of observations.</li>
+    <li>Plot the averages to reveal the trend.</li>
+</ul>
+
+<h3>Fitting Mathematical Curves:</h3>
+
+<h4>Straight Line (Linear Trend):</h4>
+<p><code>Y = a + bX</code></p>
+<ul>
+    <li>Use the least squares method to estimate 'a' and 'b'.</li>
+</ul>
+
+<h4>Second Degree Parabola (Quadratic Trend):</h4>
+<p><code>Y = a + bX + cX²</code></p>
+<ul>
+    <li>Use multiple regression techniques to estimate 'a', 'b', and 'c'.</li>
+</ul>
+
+<hr>
+
+<p class="important">Understanding correlation, regression, and time series analysis is critical for statistical modeling, forecasting, and decision-making in various fields such as economics, engineering, healthcare, and social sciences.</p>
+
+</body>
+</html>

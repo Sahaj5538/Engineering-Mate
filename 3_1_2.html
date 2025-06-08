@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Routing and Switching - Computer Networks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #eef2f7;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        section {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Routing and Switching</h1>
+
+<section>
+    <h2>Introduction</h2>
+    <p><strong>Routing</strong> and <strong>Switching</strong> are fundamental concepts in computer networking. They determine how data moves through a network, from source to destination, efficiently and reliably.</p>
+</section>
+
+<section>
+    <h2>Switching</h2>
+    <p><strong>Switching</strong> refers to the process of directing data packets between devices within the same network. It operates mainly at Layer 2 (Data Link Layer) of the OSI model.</p>
+
+    <h3>Types of Switching</h3>
+    <ul>
+        <li><strong>Circuit Switching:</strong> Establishes a dedicated communication path between two devices (used in traditional telephone networks).</li>
+        <li><strong>Packet Switching:</strong> Data is divided into packets and each packet can take any path to the destination (used in the Internet).</li>
+        <li><strong>Message Switching:</strong> Whole messages are switched and stored until the next link is available.</li>
+    </ul>
+
+    <h3>Network Switch</h3>
+    <p>A network switch connects devices in a LAN and uses MAC addresses to forward data to the correct destination. Unlike hubs, switches are intelligent devices that reduce collisions and improve network efficiency.</p>
+</section>
+
+<section>
+    <h2>Routing</h2>
+    <p><strong>Routing</strong> is the process of selecting a path for traffic in a network, or across multiple networks. It typically operates at Layer 3 (Network Layer) of the OSI model.</p>
+
+    <h3>Types of Routing</h3>
+    <ul>
+        <li><strong>Static Routing:</strong> Routes are manually configured and do not change unless manually updated.</li>
+        <li><strong>Dynamic Routing:</strong> Routers automatically adjust their paths based on network conditions using protocols.</li>
+    </ul>
+
+    <h3>Routing Algorithms</h3>
+    <ul>
+        <li><strong>Distance Vector Routing:</strong> Routers inform their neighbors of topology changes periodically. Example: RIP (Routing Information Protocol).</li>
+        <li><strong>Link State Routing:</strong> Routers have a full map of the network and compute the shortest path. Example: OSPF (Open Shortest Path First).</li>
+    </ul>
+
+    <h3>Routing Protocols</h3>
+    <ul>
+        <li><strong>RIP (Routing Information Protocol):</strong> A simple Distance Vector protocol with a maximum hop count of 15.</li>
+        <li><strong>OSPF (Open Shortest Path First):</strong> A Link State protocol using Dijkstra's algorithm for the shortest path.</li>
+        <li><strong>BGP (Border Gateway Protocol):</strong> The protocol that makes the internet work by exchanging routing information between ISPs.</li>
+        <li><strong>EIGRP (Enhanced Interior Gateway Routing Protocol):</strong> A Cisco proprietary protocol combining features of both Distance Vector and Link State routing.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Differences between Routing and Switching</h2>
+    <table border="1" cellpadding="10" cellspacing="0" style="border-collapse:collapse; width:100%;">
+        <tr style="background-color:#ecf0f1;">
+            <th>Aspect</th>
+            <th>Switching</th>
+            <th>Routing</th>
+        </tr>
+        <tr>
+            <td>Function</td>
+            <td>Forwards data within the same network (LAN)</td>
+            <td>Forwards data between different networks</td>
+        </tr>
+        <tr>
+            <td>Layer</td>
+            <td>Data Link Layer (Layer 2)</td>
+            <td>Network Layer (Layer 3)</td>
+        </tr>
+        <tr>
+            <td>Devices Used</td>
+            <td>Switch</td>
+            <td>Router</td>
+        </tr>
+        <tr>
+            <td>Addressing</td>
+            <td>MAC Address</td>
+            <td>IP Address</td>
+        </tr>
+    </table>
+</section>
+
+<section>
+    <h2>Conclusion</h2>
+    <p>Routing and Switching are essential for building efficient and scalable networks. While switching helps devices within a network communicate, routing enables communication between different networks, including the internet.</p>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matrix Decompositions and Linear Algebra</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Matrix Decompositions and Linear Algebra</h1>
+
+  <section>
+    <h2>LU Decomposition</h2>
+    <p>LU decomposition decomposes a matrix A into the product of a lower triangular matrix L and an upper triangular matrix U, i.e., A = LU. This is particularly useful for solving linear systems Ax = b efficiently.</p>
+    <p>Steps:</p>
+    <ul>
+      <li>First, solve Ly = b for y using forward substitution.</li>
+      <li>Then, solve Ux = y for x using backward substitution.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Cholesky Decomposition</h2>
+    <p>Cholesky decomposition is a special case of LU decomposition applicable to symmetric positive definite matrices. It decomposes A into the product of a lower triangular matrix L and its transpose L<sup>T</sup>, i.e., A = LL<sup>T</sup>.</p>
+    <p>Cholesky decomposition is more efficient and numerically stable than LU decomposition for such matrices.</p>
+  </section>
+
+  <section>
+    <h2>Gram-Schmidt Orthonormalization Process</h2>
+    <p>The Gram-Schmidt process is an algorithm for orthonormalizing a set of vectors in an inner product space.</p>
+    <p>Given a set of linearly independent vectors {v₁, v₂, ..., vₙ}, it constructs an orthonormal set {u₁, u₂, ..., uₙ}:</p>
+    <ul>
+      <li>u₁ = v₁ / |v₁|</li>
+      <li>For i = 2, ..., n:</li>
+      <ul>
+        <li>wᵢ = vᵢ - Σ (⟨vᵢ, uⱼ⟩ uⱼ) for j = 1 to i-1</li>
+        <li>uᵢ = wᵢ / |wᵢ|</li>
+      </ul>
+    </ul>
+    <p>This is fundamental for QR factorization and eigenvalue computations.</p>
+  </section>
+
+  <section>
+    <h2>QR Factorization</h2>
+    <p>QR factorization decomposes a matrix A into the product of an orthogonal matrix Q and an upper triangular matrix R, i.e., A = QR.</p>
+    <p>Applications:</p>
+    <ul>
+      <li>Solving linear least squares problems.</li>
+      <li>Eigenvalue problems.</li>
+    </ul>
+    <p>One method to compute QR factorization is applying the Gram-Schmidt process to the columns of A.</p>
+  </section>
+
+  <section>
+    <h2>Eigen Decomposition of Symmetric Matrices</h2>
+    <p>For a symmetric matrix A, eigen decomposition is given by:</p>
+    <p>A = PDP<sup>-1</sup></p>
+    <p>Where D is a diagonal matrix containing eigenvalues and P is a matrix whose columns are eigenvectors.</p>
+    <p>For symmetric matrices, P can be orthogonal (Q), so:</p>
+    <p>A = QDQ<sup>T</sup></p>
+    <p>This simplifies computations like matrix powers and solving linear systems.</p>
+  </section>
+
+  <section>
+    <h2>Singular Value Decomposition (SVD)</h2>
+    <p>The Singular Value Decomposition of any matrix A (square or not) is:</p>
+    <p>A = UΣV<sup>T</sup></p>
+    <ul>
+      <li>U: orthogonal matrix (left singular vectors).</li>
+      <li>Σ: diagonal matrix (singular values).</li>
+      <li>V: orthogonal matrix (right singular vectors).</li>
+    </ul>
+    <p>Applications include dimensionality reduction, image compression, and solving least squares problems.</p>
+  </section>
+
+  <section>
+    <h2>Least Squares Solution (QR Factorization and Generalized Inverse)</h2>
+    <p>The least squares problem seeks to minimize |Ax - b|².</p>
+    <p>Methods:</p>
+    <ul>
+      <li><strong>Using QR Factorization:</strong> If A = QR, solve Rx = Q<sup>T</sup>b using backward substitution.</li>
+      <li><strong>Using the Generalized Inverse:</strong> The solution is x = A<sup>+</sup>b, where A<sup>+</sup> = VΣ<sup>+</sup>U<sup>T</sup> and Σ<sup>+</sup> is the pseudo-inverse of Σ.</li>
+    </ul>
+  </section>
+
+</body>
+</html>

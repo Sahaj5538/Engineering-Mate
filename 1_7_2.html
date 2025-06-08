@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacks and Queues</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Stacks and Queues</h1>
+
+    <section>
+        <h2>Stacks</h2>
+
+        <h3>Introduction to Data Structures and Their Types</h3>
+        <p>Data Structures are methods of organizing and storing data so that they can be accessed and modified efficiently. Common types include Arrays, Linked Lists, Stacks, Queues, Trees, and Graphs.</p>
+        <p><strong>Stack</strong> is a linear data structure that follows the Last In First Out (LIFO) principle, meaning the last element added is the first one to be removed.</p>
+
+        <h3>Stack Operations</h3>
+        <ul>
+            <li><strong>push:</strong> Add an element to the top of the stack.</li>
+            <li><strong>pop:</strong> Remove the top element from the stack.</li>
+            <li><strong>peek:</strong> View the top element without removing it.</li>
+            <li><strong>display:</strong> Show all the elements in the stack.</li>
+        </ul>
+
+        <h3>Representation and Implementation: Using Arrays</h3>
+        <p>Stacks can be implemented using arrays. We maintain a variable (typically called <code>top</code>) to keep track of the index of the last inserted element. Operations are performed relative to <code>top</code>.</p>
+
+        <h3>Stack Applications</h3>
+        <ul>
+            <li><strong>Recursion:</strong> Function calls use the stack internally to store function call details like parameters and local variables.</li>
+            <li><strong>Infix to Postfix Transformation:</strong> Converting expressions from infix notation (e.g., A+B) to postfix notation (e.g., AB+), using stack to manage operators and parentheses.</li>
+            <li><strong>Evaluating Postfix Expressions:</strong> Postfix expressions are evaluated using a stack by pushing operands and applying operators as they appear.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Queues</h2>
+
+        <h3>Queue Operations</h3>
+        <ul>
+            <li><strong>enqueue:</strong> Add an element to the rear (end) of the queue.</li>
+            <li><strong>dequeue:</strong> Remove an element from the front of the queue.</li>
+            <li><strong>display:</strong> Show all the elements in the queue from front to rear.</li>
+        </ul>
+
+        <h3>Representation and Implementation: Using Arrays</h3>
+        <p>Queues can be implemented using arrays. Two variables, <code>front</code> and <code>rear</code>, are used to keep track of the start and end positions of the queue respectively. Elements are added at the rear and removed from the front.</p>
+
+        <h3>Applications of Queues</h3>
+        <ul>
+            <li>Managing requests on a single shared resource (e.g., printer scheduling).</li>
+            <li>Handling data packets in networking (e.g., router queues).</li>
+            <li>Implementing First-Come-First-Served (FCFS) scheduling policies.</li>
+        </ul>
+
+        <h3>Circular Queues</h3>
+        <p>In a Circular Queue, the last position is connected back to the first position to make a circle. It solves the problem of unused space in the linear queue (array-based implementation).</p>
+
+        <h4>Representation and Implementation</h4>
+        <p>Using arrays, after the last index, the <code>rear</code> pointer wraps around to index 0 if there is empty space at the beginning of the array. The condition for a full queue is when the next position of <code>rear</code> is <code>front</code>.</p>
+    </section>
+
+</body>
+</html>

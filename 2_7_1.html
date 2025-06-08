@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Basic Statistics and Random Variables</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      margin: 20px;
+      line-height: 1.7;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .example {
+      background: #e8f4fa;
+      padding: 10px;
+      border-left: 5px solid #3498db;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Basic Statistics and Random Variables</h1>
+
+<section>
+  <h2>Measures of Central Tendency</h2>
+  <p>Central tendency refers to the middle point or typical value of a dataset.</p>
+  <ul>
+    <li><strong>Mean (Average):</strong> Sum of all values divided by the number of values.</li>
+    <li><strong>Median:</strong> Middle value when the data is arranged in order.</li>
+    <li><strong>Mode:</strong> Most frequently occurring value in a dataset.</li>
+  </ul>
+
+  <div class="example">
+    <strong>Example:</strong><br>
+    Dataset: 2, 4, 4, 4, 5, 6, 8<br>
+    Mean = (2+4+4+4+5+6+8)/7 = 4.71<br>
+    Median = 4<br>
+    Mode = 4
+  </div>
+</section>
+
+<section>
+  <h2>Moments</h2>
+  <p>Moments are quantitative measures related to the shape of the data distribution.</p>
+  <ul>
+    <li><strong>First Moment:</strong> Mean</li>
+    <li><strong>Second Moment:</strong> Variance</li>
+    <li><strong>Third Moment:</strong> Skewness (asymmetry)</li>
+    <li><strong>Fourth Moment:</strong> Kurtosis (peakedness)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Skewness and Kurtosis</h2>
+  <h3>Skewness</h3>
+  <p>Skewness measures the asymmetry of the data distribution.</p>
+  <ul>
+    <li><strong>Positive Skew:</strong> Tail on the right side is longer.</li>
+    <li><strong>Negative Skew:</strong> Tail on the left side is longer.</li>
+  </ul>
+
+  <h3>Kurtosis</h3>
+  <p>Kurtosis measures the "tailedness" or the sharpness of the peak of the data distribution.</p>
+  <ul>
+    <li><strong>Leptokurtic:</strong> Sharper peak than normal distribution.</li>
+    <li><strong>Platykurtic:</strong> Flatter peak than normal distribution.</li>
+    <li><strong>Mesokurtic:</strong> Normal distribution kurtosis.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Random Variables</h2>
+  <p>A random variable assigns a real number to each outcome of a random experiment.</p>
+
+  <h3>Types</h3>
+  <ul>
+    <li><strong>Discrete Random Variables:</strong> Take countable values (e.g., number of heads in coin toss).</li>
+    <li><strong>Continuous Random Variables:</strong> Take an infinite number of possible values (e.g., height, weight).</li>
+  </ul>
+
+  <h3>Probability Functions</h3>
+  <ul>
+    <li><strong>Probability Mass Function (PMF):</strong> For discrete random variables, gives the probability of each value.</li>
+    <li><strong>Probability Density Function (PDF):</strong> For continuous random variables, describes the likelihood of a value within a given range.</li>
+  </ul>
+
+  <div class="example">
+    <strong>Example (PMF):</strong><br>
+    Tossing a fair coin: P(X=0) = 0.5, P(X=1) = 0.5
+  </div>
+</section>
+
+<section>
+  <h2>Constants of Random Variables</h2>
+
+  <h3>Mean (Expected Value)</h3>
+  <p>The mean is the long-run average value of repetitions of the experiment.</p>
+
+  <h3>Variance</h3>
+  <p>Variance measures the spread of the data around the mean.</p>
+
+  <h3>Moments about Mean</h3>
+  <p>The nth central moment is the expected value of (X - mean)^n.</p>
+</section>
+
+<section>
+  <h2>Bivariate Distributions and Covariance</h2>
+  <h3>Bivariate Distribution</h3>
+  <p>It deals with the probability distribution involving two random variables simultaneously.</p>
+
+  <h3>Covariance</h3>
+  <p>Covariance measures the directional relationship between two random variables.</p>
+  <ul>
+    <li><strong>Positive Covariance:</strong> Variables move in the same direction.</li>
+    <li><strong>Negative Covariance:</strong> Variables move in opposite directions.</li>
+  </ul>
+
+  <div class="example">
+    <strong>Example:</strong><br>
+    If high marks in Math tend to go with high marks in Physics, covariance is positive.
+  </div>
+</section>
+
+</body>
+</html>
