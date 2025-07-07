@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Queries and Constraints</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.7;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        code {
+            background-color: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        pre {
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>SQL Queries and Constraints</h1>
+
+    <section>
+        <h2>SQL Data Definition</h2>
+        <p>SQL provides commands to define database schema including creating, altering, and dropping tables and other database objects.</p>
+    </section>
+
+    <section>
+        <h2>Types of SQL Commands</h2>
+        <ul>
+            <li><strong>DDL (Data Definition Language):</strong> CREATE, ALTER, DROP</li>
+            <li><strong>DML (Data Manipulation Language):</strong> INSERT, UPDATE, DELETE, SELECT</li>
+            <li><strong>DCL (Data Control Language):</strong> GRANT, REVOKE</li>
+            <li><strong>TCL (Transaction Control Language):</strong> COMMIT, ROLLBACK, SAVEPOINT</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Form of Basic SQL Query</h2>
+        <p>Typical form:</p>
+        <pre><code>SELECT attribute_list
+FROM relation_list
+WHERE condition;</code></pre>
+    </section>
+
+    <section>
+        <h2>SQL Operators</h2>
+        <ul>
+            <li><strong>Arithmetic Operators:</strong> +, -, *, /</li>
+            <li><strong>Comparison Operators:</strong> =, <>, &lt;, &gt;, &lt;=, &gt;=</li>
+            <li><strong>Logical Operators:</strong> AND, OR, NOT</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Set Operators</h2>
+        <ul>
+            <li><strong>UNION:</strong> Combines results from two queries (removes duplicates).</li>
+            <li><strong>UNION ALL:</strong> Combines results (includes duplicates).</li>
+            <li><strong>INTERSECT:</strong> Retrieves common records.</li>
+            <li><strong>MINUS/EXCEPT:</strong> Returns records from the first query that are not present in the second.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Nested Queries</h2>
+        <p>Queries written inside another query, often used with IN, EXISTS, ALL, ANY keywords.</p>
+    </section>
+
+    <section>
+        <h2>Aggregate Operators</h2>
+        <ul>
+            <li><strong>SUM()</strong> - Calculates the total.</li>
+            <li><strong>AVG()</strong> - Calculates the average.</li>
+            <li><strong>MAX()</strong> - Finds the maximum value.</li>
+            <li><strong>MIN()</strong> - Finds the minimum value.</li>
+            <li><strong>COUNT()</strong> - Counts the number of rows.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>NULL Values</h2>
+        <p>SQL uses NULL to represent missing or unknown data. Functions like IS NULL or IS NOT NULL are used to check for NULLs.</p>
+    </section>
+
+    <section>
+        <h2>Integrity Constraints Over Relations</h2>
+        <ul>
+            <li><strong>Primary Key:</strong> Uniquely identifies a record.</li>
+            <li><strong>Foreign Key:</strong> Ensures referential integrity between tables.</li>
+            <li><strong>NOT NULL:</strong> Ensures that a column cannot have a NULL value.</li>
+            <li><strong>CHECK:</strong> Ensures that all values in a column satisfy a specific condition.</li>
+            <li><strong>UNIQUE:</strong> Ensures all values in a column are different.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Joins</h2>
+        <ul>
+            <li><strong>INNER JOIN:</strong> Returns records with matching values in both tables.</li>
+            <li><strong>LEFT JOIN:</strong> Returns all records from the left table and matched records from the right table.</li>
+            <li><strong>RIGHT JOIN:</strong> Returns all records from the right table and matched records from the left table.</li>
+            <li><strong>FULL JOIN:</strong> Returns records when there is a match in either table.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Introduction to Views</h2>
+        <p>A View is a virtual table based on the result set of a SQL query.</p>
+        <pre><code>CREATE VIEW view_name AS
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;</code></pre>
+    </section>
+
+    <section>
+        <h2>Destroying / Altering Tables and Views</h2>
+        <ul>
+            <li><strong>DROP TABLE/View:</strong> Removes the table/view completely.</li>
+            <li><strong>ALTER TABLE:</strong> Modifies the structure of an existing table.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Cursors</h2>
+        <p>A Cursor is a database object used to retrieve, manipulate, and navigate through a result set row by row.</p>
+    </section>
+
+    <section>
+        <h2>Triggers and Active Databases</h2>
+        <p>A Trigger is a SQL procedure that initiates an action in response to a database event (INSERT, UPDATE, DELETE).</p>
+        <pre><code>CREATE TRIGGER trigger_name
+AFTER INSERT ON table_name
+FOR EACH ROW
+BEGIN
+    -- trigger logic
+END;</code></pre>
+    </section>
+
+</body>
+</html>

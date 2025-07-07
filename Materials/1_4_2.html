@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homogeneous and Non-homogeneous Equations</title>
+</head>
+<body>
+  <h1>Homogeneous and Non-homogeneous Linear Differential Equations</h1>
+
+  <h2>Homogeneous Equations</h2>
+  <p>
+    A <strong>homogeneous</strong> linear differential equation with constant coefficients has the form:
+  </p>
+  <p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mrow>
+        <mi>a_n</mi><msup><mi>d</mi><mi>n</mi></msup><mi>y</mi><mo>/</mo><msup><mi>dx</mi><mi>n</mi></msup> 
+        <mo>+</mo> 
+        <mi>a_{n-1}</mi><msup><mi>d</mi><mi>n-1</mi></msup><mi>y</mi><mo>/</mo><msup><mi>dx</mi><mi>n-1</mi></msup> 
+        <mo>+</mo> 
+        <mo>&#x22EF;</mo> 
+        <mo>+</mo> 
+        <mi>a_1</mi><mfrac><mi>dy</mi><mi>dx</mi></mfrac> 
+        <mo>+</mo> 
+        <mi>a_0</mi><mi>y</mi> 
+        <mo>=</mo> 
+        <mn>0</mn>
+      </mrow>
+    </math>
+  </p>
+
+  <h3>Solution Method:</h3>
+  <ul>
+    <li>Assume a solution of the form \( y = e^{rx} \).</li>
+    <li>Substituting into the equation gives the <strong>characteristic equation</strong>:
+      <p>\( a_n r^n + a_{n-1} r^{n-1} + \cdots + a_1 r + a_0 = 0 \)</p>
+    </li>
+    <li>The nature of the roots determines the general solution:
+      <ul>
+        <li><strong>Distinct Real Roots</strong> \( r_1, r_2, \dots, r_n \):
+          <p>\( y(x) = c_1 e^{r_1 x} + c_2 e^{r_2 x} + \cdots + c_n e^{r_n x} \)</p>
+        </li>
+        <li><strong>Repeated Roots</strong> \( r \) repeated \( k \) times:
+          <p>\( y(x) = (c_1 + c_2 x + \cdots + c_k x^{k-1})e^{rx} \)</p>
+        </li>
+        <li><strong>Complex Conjugate Roots</strong> \( \alpha \pm i\beta \):
+          <p>\( y(x) = e^{\alpha x} (c_1 \cos(\beta x) + c_2 \sin(\beta x)) \)</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Example:</h3>
+  <p>
+    Solve \( y'' - 3y' + 2y = 0 \).
+  </p>
+  <p>
+    Characteristic equation: \( r^2 - 3r + 2 = 0 \) which factors to \( (r-1)(r-2) = 0 \).
+  </p>
+  <p>
+    Roots: \( r_1 = 1 \), \( r_2 = 2 \).
+  </p>
+  <p>
+    General solution: \( y(x) = c_1 e^{x} + c_2 e^{2x} \).
+  </p>
+
+  <h2>Non-homogeneous Equations</h2>
+  <p>
+    A <strong>non-homogeneous</strong> linear differential equation has the form:
+  </p>
+  <p>
+    \( a_n \frac{d^n y}{dx^n} + a_{n-1} \frac{d^{n-1} y}{dx^{n-1}} + \cdots + a_1 \frac{dy}{dx} + a_0 y = f(x) \)
+  </p>
+
+  <p>
+    The general solution is:
+    <br>
+    \( y(x) = y_c(x) + y_p(x) \)
+  </p>
+
+  <h3>Method of Undetermined Coefficients:</h3>
+  <ol>
+    <li>Guess the form of \( y_p(x) \) based on \( f(x) \).</li>
+    <li>Substitute into the differential equation and solve for unknown coefficients.</li>
+  </ol>
+
+  <h3>Example:</h3>
+  <p>
+    Solve \( y'' - 3y' + 2y = 3e^{2x} \).
+  </p>
+  <p>
+    Complementary solution: \( y_c(x) = c_1 e^{x} + c_2 e^{2x} \).
+  </p>
+  <p>
+    Particular solution guess: \( y_p(x) = Axe^{2x} \).
+  </p>
+  <p>
+    After solving: \( A = 3 \), thus \( y_p(x) = 3x e^{2x} \).
+  </p>
+  <p>
+    General solution: \( y(x) = c_1 e^{x} + c_2 e^{2x} + 3x e^{2x} \).
+  </p>
+
+  <h2>Variation of Parameters</h2>
+  <p>
+    Useful when undetermined coefficients do not work. For an equation:
+  </p>
+  <p>
+    \( y'' + p(x) y' + q(x) y = f(x) \)
+  </p>
+  <p>
+    Steps:
+  </p>
+  <ol>
+    <li>Find \( y_c(x) = c_1 y_1(x) + c_2 y_2(x) \).</li>
+    <li>Compute the <strong>Wronskian</strong>:
+      <br>
+      \( W(y_1, y_2) = y_1 y_2' - y_2 y_1' \)
+    </li>
+    <li>Find \( u_1(x) \) and \( u_2(x) \):
+      <br>
+      \( u_1(x) = -\int \frac{y_2(x) f(x)}{W(y_1, y_2)} dx \)
+      <br>
+      \( u_2(x) = \int \frac{y_1(x) f(x)}{W(y_1, y_2)} dx \)
+    </li>
+    <li>Particular solution: \( y_p(x) = u_1(x) y_1(x) + u_2(x) y_2(x) \).</li>
+  </ol>
+
+  <h3>Example:</h3>
+  <p>
+    Solve \( y'' + y = \sec(x) \).
+  </p>
+  <p>
+    Complementary solution: \( y_c(x) = c_1 \cos(x) + c_2 \sin(x) \).
+  </p>
+  <p>
+    Wronskian: \( W = 1 \).
+  </p>
+  <p>
+    Find \( u_1(x) \) and \( u_2(x) \):
+    <br>
+    \( u_1(x) = \ln|\cos(x)| \),
+    <br>
+    \( u_2(x) = x \).
+  </p>
+  <p>
+    Particular solution: \( y_p(x) = \cos(x) \ln|\cos(x)| + x \sin(x) \).
+  </p>
+  <p>
+    General solution: \( y(x) = c_1 \cos(x) + c_2 \sin(x) + \cos(x) \ln|\cos(x)| + x \sin(x) \).
+  </p>
+
+  <h2>Equations with Variable Coefficients</h2>
+
+  <h3>Cauchy-Euler Equations:</h3>
+  <p>
+    Form:
+    <br>
+    \( ax^2 y'' + bxy' + cy = 0 \)
+  </p>
+  <p>
+    Assume \( y = x^r \), leading to the auxiliary equation:
+    <br>
+    \( ar(r-1) + br + c = 0 \)
+  </p>
+
+  <p>
+    Solutions:
+    <ul>
+      <li>Distinct real roots \( r_1, r_2 \): \( y(x) = c_1 x^{r_1} + c_2 x^{r_2} \)</li>
+      <li>Repeated root \( r_1 \): \( y(x) = (c_1 + c_2 \ln|x|) x^{r_1} \)</li>
+      <li>Complex conjugate roots \( \alpha \pm i\beta \): \( y(x) = x^\alpha (c_1 \cos(\beta \ln|x|) + c_2 \sin(\beta \ln|x|)) \)</li>
+    </ul>
+  </p>
+
+  <h3>Example:</h3>
+  <p>
+    Solve \( x^2 y'' + 4x y' + 2y = 0 \).
+  </p>
+  <p>
+    Auxiliary equation: \( r(r-1) + 4r + 2 = 0 \) ⇒ \( r^2 + 3r + 2 = 0 \).
+    <br>
+    Roots: \( r_1 = -1 \), \( r_2 = -2 \).
+  </p>
+  <p>
+    General solution: \( y(x) = c_1 x^{-1} + c_2 x^{-2} \).
+  </p>
+
+  <h3>Legendre's Equation:</h3>
+  <p>
+    Form:
+    <br>
+    \( (1-x^2)y'' - 2x y' + n(n+1)y = 0 \)
+  </p>
+  <p>
+    Solutions are Legendre polynomials \( P_n(x) \).
+  </p>
+  <p>
+    First few Legendre polynomials:
+    <ul>
+      <li>\( P_0(x) = 1 \)</li>
+      <li>\( P_1(x) = x \)</li>
+      <li>\( P_2(x) = \frac{1}{2}(3x^2 - 1) \)</li>
+      <li>\( P_3(x) = \frac{1}{2}(5x^3 - 3x) \)</li>
+    </ul>
+  </p>
+  <p>
+    General solution:
+    <br>
+    \( y(x) = c_1 P_n(x) + c_2 Q_n(x) \)
+    <br>
+    where \( Q_n(x) \) is the Legendre function of the second kind.
+  </p>
+</body>
+</html>

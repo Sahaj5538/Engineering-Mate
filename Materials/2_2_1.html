@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit I: Object Oriented Thinking and Java Basics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.7;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>UNIT I: Object Oriented Thinking and Java Basics</h1>
+
+    <section>
+        <h2>Object Oriented Thinking</h2>
+
+        <h3>Introduction</h3>
+        <p>Object-oriented thinking focuses on modeling real-world entities as objects that combine data and behavior. It helps in designing modular, reusable, and scalable software systems.</p>
+
+        <h3>Need for Object-Oriented Programming</h3>
+        <ul>
+            <li>Promotes modularity and code reuse.</li>
+            <li>Helps manage complexity in large software systems.</li>
+            <li>Encourages better data protection (encapsulation).</li>
+            <li>Enhances flexibility and maintainability of code.</li>
+        </ul>
+
+        <h3>Principles of Object-Oriented Languages</h3>
+        <ul>
+            <li><strong>Encapsulation:</strong> Wrapping data and methods together.</li>
+            <li><strong>Abstraction:</strong> Hiding complex details and exposing only essential parts.</li>
+            <li><strong>Inheritance:</strong> Acquiring properties and behaviors from a parent class.</li>
+            <li><strong>Polymorphism:</strong> Ability to take multiple forms (method overloading/overriding).</li>
+        </ul>
+
+        <h3>Applications of OOP</h3>
+        <ul>
+            <li>Software development (desktop, web, mobile apps).</li>
+            <li>Game development.</li>
+            <li>Simulations and modeling systems.</li>
+            <li>Artificial Intelligence and Machine Learning.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Java Overview</h2>
+
+        <h3>History of Java</h3>
+        <p>Java was developed by James Gosling and his team at Sun Microsystems in 1995. Initially called "Oak," it was later renamed "Java" after the Java coffee.</p>
+
+        <h3>Java Virtual Machine (JVM)</h3>
+        <p>The JVM is an abstract computing machine that enables a computer to run Java programs by converting bytecode into machine code at runtime.</p>
+
+        <h3>Java Features</h3>
+        <ul>
+            <li>Simple and Easy to Learn</li>
+            <li>Platform Independent (Write Once, Run Anywhere)</li>
+            <li>Object-Oriented</li>
+            <li>Robust and Secure</li>
+            <li>Multithreaded</li>
+            <li>High Performance (Just-In-Time Compiler)</li>
+            <li>Distributed</li>
+        </ul>
+
+        <h3>Program Structure</h3>
+        <p>A basic Java program includes:</p>
+        <ul>
+            <li>Class Definition</li>
+            <li>Methods (main method is the entry point)</li>
+            <li>Statements and Expressions</li>
+        </ul>
+        <pre>
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+        </pre>
+
+        <h3>Installation of JDK</h3>
+        <ul>
+            <li>Download Java Development Kit (JDK) from the official Oracle website or OpenJDK.</li>
+            <li>Install and set up environment variables (like <code>JAVA_HOME</code> and add to <code>PATH</code>).</li>
+            <li>Verify installation using <code>java -version</code> and <code>javac -version</code> in the terminal or command prompt.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Java Basics</h2>
+
+        <h3>Variables</h3>
+        <p>Variables are containers for storing data values in Java.</p>
+
+        <h3>Primitive Data Types</h3>
+        <ul>
+            <li><code>byte</code>, <code>short</code>, <code>int</code>, <code>long</code> (integers)</li>
+            <li><code>float</code>, <code>double</code> (floating-point numbers)</li>
+            <li><code>char</code> (single character)</li>
+            <li><code>boolean</code> (true/false)</li>
+        </ul>
+
+        <h3>Identifiers and Naming Conventions</h3>
+        <ul>
+            <li>Names can contain letters, digits, underscores, and dollar signs.</li>
+            <li>Cannot start with a digit.</li>
+            <li>Should be meaningful and use camelCase for variables and methods (e.g., <code>studentName</code>).</li>
+        </ul>
+
+        <h3>Keywords</h3>
+        <p>Reserved words in Java like <code>class</code>, <code>public</code>, <code>static</code>, <code>void</code>, etc.</p>
+
+        <h3>Literals</h3>
+        <p>Fixed values assigned to variables, such as numbers, characters, or strings (e.g., <code>10</code>, <code>'A'</code>, <code>"Hello"</code>).</p>
+
+        <h3>Operators</h3>
+        <ul>
+            <li><strong>Binary Operators:</strong> +, -, *, /, %, &, |, ^, etc.</li>
+            <li><strong>Unary Operators:</strong> +, -, ++, --, !</li>
+            <li><strong>Ternary Operator:</strong> <code>condition ? trueResult : falseResult</code></li>
+        </ul>
+
+        <h3>Expressions</h3>
+        <p>Combination of variables, literals, operators that evaluate to a single value.</p>
+
+        <h3>Primitive Type Conversion and Casting</h3>
+        <p><strong>Implicit Casting (Widening):</strong> Smaller to larger data type (e.g., int to double).</p>
+        <p><strong>Explicit Casting (Narrowing):</strong> Larger to smaller data type (e.g., double to int), using syntax like <code>(int)</code>.</p>
+
+        <h3>Flow of Control</h3>
+        <ul>
+            <li><strong>Branching:</strong> if, if-else, nested if-else, switch.</li>
+            <li><strong>Conditional:</strong> Ternary operator.</li>
+            <li><strong>Loops:</strong> for, while, do-while.</li>
+        </ul>
+    </section>
+
+</body>
+</html>

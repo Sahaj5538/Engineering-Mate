@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <header>
+        <h1>Eigenvalues and Eigenvectors</h1>
+    </header>
+
+    <section>
+        <h2>Eigenvectors</h2>
+        <p>A non-zero vector that, when a linear transformation is applied to it, only changes by a scalar factor.</p>
+    </section>
+
+    <section>
+        <h2>Eigenvalues</h2>
+        <p>This scalar factor by which an eigenvector is scaled.</p>
+        <p>Mathematically, if <strong>A</strong> is a square matrix, <strong>v</strong> is an eigenvector, and <strong>&lambda;</strong> is the corresponding eigenvalue, then:</p>
+        <pre>A v = &lambda; v</pre>
+    </section>
+
+    <section>
+        <h2>Finding Eigenvalues</h2>
+        <p>To find eigenvalues, you typically solve the characteristic equation:</p>
+        <pre>det(A - &lambda; I) = 0</pre>
+        <p>Where <strong>I</strong> is the identity matrix. The solutions <strong>&lambda;</strong> to this equation are the eigenvalues of <strong>A</strong>. For each eigenvalue, you can then find the corresponding eigenvector by solving:</p>
+        <pre>(A - &lambda; I) v = 0</pre>
+        <p>This involves finding the null space of the matrix <strong>(A - &lambda; I)</strong>.</p>
+    </section>
+
+    <section>
+        <h2>Diagonalization of Matrices</h2>
+        <p>Diagonalization is the process of transforming a matrix into a diagonal form, which simplifies many computations. A square matrix <strong>A</strong> is diagonalizable if there exists an invertible matrix <strong>P</strong> such that:</p>
+        <pre>P<sup>-1</sup> A P = D</pre>
+        <p>Where <strong>D</strong> is a diagonal matrix. The columns of <strong>P</strong> are the eigenvectors of <strong>A</strong>, and the diagonal entries of <strong>D</strong> are the corresponding eigenvalues.</p>
+        <p>Not all matrices are diagonalizable. A matrix is diagonalizable if and only if it has <strong>n</strong> linearly independent eigenvectors, where <strong>n</strong> is the size of the matrix.</p>
+    </section>
+
+    <section>
+        <h2>Orthogonal Diagonalization of Symmetric Matrices</h2>
+        <p>Symmetric matrices have special properties that make them particularly nice to work with. A matrix <strong>A</strong> is symmetric if <strong>A = A<sup>T</sup></strong>, where <strong>A<sup>T</sup></strong> is the transpose of <strong>A</strong>.</p>
+        <p><strong>Key Theorem:</strong> Every symmetric matrix is orthogonally diagonalizable. This means there exists an orthogonal matrix <strong>Q</strong> such that:</p>
+        <pre>Q<sup>T</sup> A Q = D</pre>
+        <p>Where <strong>Q</strong> is an orthogonal matrix (i.e., <strong>Q<sup>T</sup> = Q<sup>-1</sup></strong>) and <strong>D</strong> is a diagonal matrix. The columns of <strong>Q</strong> are the orthonormal eigenvectors of <strong>A</strong>.</p>
+    </section>
+
+    <section>
+        <h2>Definiteness of Symmetric Matrices</h2>
+        <p>The definiteness of a symmetric matrix characterizes the sign of its eigenvalues.</p>
+        <ul>
+            <li><strong>Positive Definite:</strong> All eigenvalues are positive.</li>
+            <li><strong>Negative Definite:</strong> All eigenvalues are negative.</li>
+            <li><strong>Positive Semidefinite:</strong> All eigenvalues are non-negative (positive or zero).</li>
+            <li><strong>Negative Semidefinite:</strong> All eigenvalues are non-positive (negative or zero).</li>
+            <li><strong>Indefinite:</strong> Has both positive and negative eigenvalues.</li>
+        </ul>
+        <p>The definiteness of a matrix can be determined by examining its eigenvalues or by using Sylvester's criterion, which involves checking the signs of the leading principal minors of the matrix.</p>
+    </section>
+
+    <section>
+        <h2>Quadratic Forms and Reduction to Canonical Form</h2>
+        <p>A quadratic form is a homogeneous polynomial of degree two in <strong>n</strong> variables, which can be written in matrix form as:</p>
+        <pre>Q(x) = x<sup>T</sup> A x</pre>
+        <p>Where <strong>A</strong> is a symmetric matrix. The goal is often to reduce the quadratic form to its canonical form, which is a diagonal form:</p>
+        <pre>Q(y) = &lambda;<sub>1</sub> y<sub>1</sub><sup>2</sup> + &lambda;<sub>2</sub> y<sub>2</sub><sup>2</sup> + ⋯ + &lambda;<sub>n</sub> y<sub>n</sub><sup>2</sup></pre>
+    </section>
+</body>
+</html>
+    

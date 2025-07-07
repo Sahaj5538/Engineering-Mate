@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memory Management and Virtual Memory</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.7;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    section {
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .example {
+      background: #eef7fa;
+      padding: 10px;
+      border-left: 4px solid #3498db;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Memory Management and Virtual Memory</h1>
+
+<section>
+  <h2>Memory Management</h2>
+
+  <h3>Swapping</h3>
+  <p>Swapping is a technique where a process can be temporarily moved from main memory to a secondary storage (disk) to free up space for other processes.</p>
+  <div class="example">
+    <strong>Example:</strong> If RAM is full, the OS swaps out an inactive process to bring in a new process.
+  </div>
+
+  <h3>Contiguous Memory Allocation</h3>
+  <p>In this method, each process is allocated a single contiguous block of memory space. It is simple but can suffer from fragmentation.</p>
+  <ul>
+    <li><strong>Fixed Partitioning:</strong> Memory is divided into fixed sizes at system boot.</li>
+    <li><strong>Dynamic Partitioning:</strong> Memory is allocated dynamically to fit processes exactly.</li>
+  </ul>
+
+  <h3>Paging</h3>
+  <p>Paging solves external fragmentation by dividing physical memory into fixed-size blocks called "frames" and logical memory into blocks of the same size called "pages".</p>
+  <ul>
+    <li>Logical address is divided into page number and page offset.</li>
+    <li>Page tables are used to translate logical addresses to physical addresses.</li>
+  </ul>
+
+  <h3>Structure of the Page Table</h3>
+  <ul>
+    <li><strong>Single-Level Paging:</strong> One page table to manage address translations.</li>
+    <li><strong>Multi-Level Paging:</strong> Page table entries point to another page table (saves space).</li>
+    <li><strong>Inverted Page Table:</strong> One entry for each frame in physical memory.</li>
+  </ul>
+
+  <h3>Segmentation</h3>
+  <p>Segmentation divides memory into segments based on the logical division of a program (such as code, data, stack). Each segment has its own base and limit.</p>
+  <ul>
+    <li>Logical address: Segment number + offset.</li>
+    <li>Segment Table stores base and limit of each segment.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Virtual Memory</h2>
+
+  <h3>Demand Paging</h3>
+  <p>In demand paging, pages are only loaded into memory when they are needed (on demand). If the page is not in memory, a page fault occurs, and the page is loaded from secondary storage.</p>
+
+  <h3>Page Replacement Algorithms</h3>
+  <p>When a page fault occurs and memory is full, the OS must replace a page using algorithms like:</p>
+  <ul>
+    <li><strong>FIFO (First-In-First-Out):</strong> Replace the oldest loaded page.</li>
+    <li><strong>LRU (Least Recently Used):</strong> Replace the page that has not been used for the longest time.</li>
+    <li><strong>Optimal Page Replacement:</strong> Replace the page that will not be used for the longest period in the future.</li>
+  </ul>
+
+  <div class="example">
+    <strong>Example:</strong><br>
+    In FIFO, if frames hold pages [2, 3, 4] and page 5 arrives, page 2 is removed.
+  </div>
+
+  <h3>Allocation of Frames</h3>
+  <p>Frames must be allocated among processes:</p>
+  <ul>
+    <li><strong>Equal Allocation:</strong> Each process gets the same number of frames.</li>
+    <li><strong>Proportional Allocation:</strong> Frames allocated based on process size.</li>
+  </ul>
+
+  <h3>Thrashing</h3>
+  <p>Thrashing occurs when the system spends most of its time swapping pages in and out rather than executing processes. This leads to a severe drop in performance.</p>
+  <ul>
+    <li>Occurs when there is insufficient memory and too many processes.</li>
+    <li>Solutions: Reduce degree of multiprogramming, or use working set model.</li>
+  </ul>
+</section>
+
+</body>
+</html>

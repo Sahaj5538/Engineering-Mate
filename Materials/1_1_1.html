@@ -1,0 +1,68 @@
+<html>
+<body>
+    <h2>Operations on Vectors and Matrices</h2>
+
+    <h3>Vector Addition</h3>
+    <p>Adding two vectors component-wise: (u₁, u₂, ..., uₙ) + (v₁, v₂, ..., vₙ) = (u₁ + v₁, u₂ + v₂, ..., uₙ + vₙ)</p>
+
+    <h3>Scalar Multiplication</h3>
+    <p>Multiplying a vector by a scalar k: k * (u₁, u₂, ..., uₙ) = (k * u₁, k * u₂, ..., k * uₙ)</p>
+
+    <h3>Matrix Addition</h3>
+    <p>Adding two matrices component-wise: (A + B) = (aᵢⱼ + bᵢⱼ) for each element in the matrix.</p>
+
+    <h3>Matrix Multiplication</h3>
+    <p>Multiplying two matrices: Each element is the sum of products of corresponding row elements of the first matrix and column elements of the second matrix.</p>
+
+    <h2>Orthogonal Projection of Vectors</h2>
+
+    <h3>Orthogonal Projection</h3>
+    <p>The orthogonal projection of vector u onto vector v is given by: (dot product of u and v) divided by (square of the length of v), multiplied by vector v.</p>
+
+    <h3>Properties of Orthogonal Projection</h3>
+    <ul>
+        <li>The projection is parallel to vector v.</li>
+        <li>The difference (u - projection) is orthogonal to v.</li>
+        <li>The length of the projection is proportional to the cosine of the angle between u and v.</li>
+    </ul>
+
+    <h2>Exact and Generalized Inverse of a Matrix</h2>
+
+    <h3>Exact Inverse</h3>
+    <p>A square matrix A has an inverse A⁻¹ if and only if the determinant of A is not zero. It satisfies: A * A⁻¹ = I (identity matrix).</p>
+
+    <h3>Generalized Inverse (Moore-Penrose Pseudoinverse)</h3>
+    <ul>
+        <li>A * A⁺ * A = A</li>
+        <li>A⁺ * A * A⁺ = A⁺</li>
+        <li>(A⁺)ᵗ = A⁺</li>
+        <li>(A * A⁺)ᵗ = A * A⁺</li>
+    </ul>
+
+    <h2>Rank of a Matrix and Linear Independence</h2>
+
+    <h3>Rank of a Matrix</h3>
+    <p>The rank of a matrix is the number of independent rows or columns. It tells the dimension of the space spanned by its rows or columns.</p>
+
+    <h3>Linear Independence</h3>
+    <p>A set of vectors is linearly independent if no vector in the set can be written as a combination of the others. Only the trivial combination (all zero coefficients) makes the sum zero.</p>
+
+    <h2>Structured Square Matrices</h2>
+
+    <ul>
+        <li><b>Symmetric Matrix:</b> A matrix equal to its transpose (A = Aᵗ).</li>
+        <li><b>Hermitian Matrix:</b> A complex matrix equal to its conjugate transpose.</li>
+        <li><b>Skew-Symmetric Matrix:</b> A matrix where A = -Aᵗ.</li>
+        <li><b>Orthogonal Matrix:</b> A matrix where Aᵗ * A = I.</li>
+        <li><b>Unitary Matrix:</b> A complex matrix where Aᴴ * A = I (Aᴴ is conjugate transpose).</li>
+    </ul>
+
+    <h2>Vector and Matrix Norms</h2>
+
+    <h3>Vector Norms</h3>
+    <ul>
+        <li>l₁-norm (Manhattan norm): Sum of absolute values of vector components.</li>
+        <li>l₂-norm (Euclidean norm): Square root of the sum of squares of vector components.</li>
+    </ul>
+</body>
+</html>

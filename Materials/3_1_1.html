@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computer Networks: OSI and TCP/IP Models</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #34495e;
+        }
+        section {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        ul {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Computer Networks: OSI and TCP/IP Models</h1>
+
+<section>
+    <h2>Introduction to Computer Networks</h2>
+    <p>A computer network is a system that connects two or more computers so they can share resources and information. Networking allows computers to communicate efficiently and securely over short or long distances.</p>
+    <p><strong>Types of Networks:</strong></p>
+    <ul>
+        <li>LAN (Local Area Network)</li>
+        <li>WAN (Wide Area Network)</li>
+        <li>MAN (Metropolitan Area Network)</li>
+        <li>Wireless Networks (Wi-Fi, Cellular)</li>
+    </ul>
+</section>
+
+<section>
+    <h2>OSI Model (Open Systems Interconnection Model)</h2>
+    <p>The OSI Model is a conceptual framework used to understand and implement networking protocols in seven distinct layers. Each layer serves a specific function.</p>
+
+    <h3>7 Layers of OSI Model:</h3>
+    <ul>
+        <li><strong>Layer 7 - Application Layer:</strong> Provides network services directly to applications (e.g., HTTP, FTP).</li>
+        <li><strong>Layer 6 - Presentation Layer:</strong> Translates data formats between applications and the network (e.g., encryption, compression).</li>
+        <li><strong>Layer 5 - Session Layer:</strong> Manages sessions or connections between computers (e.g., establishing, maintaining, ending sessions).</li>
+        <li><strong>Layer 4 - Transport Layer:</strong> Provides reliable data transfer (e.g., TCP, UDP).</li>
+        <li><strong>Layer 3 - Network Layer:</strong> Handles routing and forwarding (e.g., IP addressing, routers).</li>
+        <li><strong>Layer 2 - Data Link Layer:</strong> Provides node-to-node data transfer and handles error correction (e.g., MAC address, switches).</li>
+        <li><strong>Layer 1 - Physical Layer:</strong> Deals with the physical connection between devices (e.g., cables, switches, voltage levels).</li>
+    </ul>
+
+    <h3>Key Points:</h3>
+    <ul>
+        <li>Each layer serves the layer above it and is served by the layer below it.</li>
+        <li>Helps standardize network functions for interoperability.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>TCP/IP Model</h2>
+    <p>The TCP/IP Model is a simpler, four-layer model used to conceptualize how data should travel across networks. It forms the basis of the internet and most modern networks.</p>
+
+    <h3>4 Layers of TCP/IP Model:</h3>
+    <ul>
+        <li><strong>Application Layer:</strong> Combines OSI's Application, Presentation, and Session layers. (e.g., HTTP, SMTP, FTP)</li>
+        <li><strong>Transport Layer:</strong> Similar to OSI's Transport layer. (e.g., TCP, UDP)</li>
+        <li><strong>Internet Layer:</strong> Matches OSI's Network layer. (e.g., IP protocol)</li>
+        <li><strong>Network Access Layer:</strong> Combines OSI's Data Link and Physical layers. (e.g., Ethernet, Wi-Fi)</li>
+    </ul>
+
+    <h3>Key Points:</h3>
+    <ul>
+        <li>More practical and widely implemented than OSI.</li>
+        <li>Focuses on protocols used on the internet.</li>
+        <li>Provides end-to-end communications specifying how data should be packetized, addressed, transmitted, routed, and received.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Comparison: OSI vs TCP/IP</h2>
+    <table border="1" cellpadding="10" cellspacing="0" style="border-collapse:collapse; width:100%;">
+        <tr style="background-color:#ecf0f1;">
+            <th>Aspect</th>
+            <th>OSI Model</th>
+            <th>TCP/IP Model</th>
+        </tr>
+        <tr>
+            <td>Layers</td>
+            <td>7 Layers</td>
+            <td>4 Layers</td>
+        </tr>
+        <tr>
+            <td>Development</td>
+            <td>Theoretical model</td>
+            <td>Practical, based on standard protocols</td>
+        </tr>
+        <tr>
+            <td>Usage</td>
+            <td>Rarely implemented</td>
+            <td>Widely used in real-world networks</td>
+        </tr>
+        <tr>
+            <td>Approach</td>
+            <td>Prescriptive (how networks should work)</td>
+            <td>Descriptive (how networks actually work)</td>
+        </tr>
+    </table>
+</section>
+
+</body>
+</html>

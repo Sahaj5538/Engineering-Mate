@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical Logic and Predicates</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.7;
+        }
+        h1, h2, h3 {
+            color: #34495e;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        code {
+            background-color: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        pre {
+            background: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mathematical Logic and Predicates</h1>
+
+    <section>
+        <h2>Mathematical Logic</h2>
+
+        <h3>Statements and Notations</h3>
+        <p>
+            A <strong>statement</strong> is a declarative sentence that is either true or false, but not both. Statements are often denoted by letters such as <code>p</code>, <code>q</code>, <code>r</code>.
+        </p>
+
+        <h3>Connectives</h3>
+        <p>Logical connectives are used to combine statements:</p>
+        <ul>
+            <li><strong>AND ( ∧ )</strong> - Conjunction</li>
+            <li><strong>OR ( ∨ )</strong> - Disjunction</li>
+            <li><strong>NOT ( ¬ )</strong> - Negation</li>
+            <li><strong>IMPLICATION ( → )</strong> - If...Then</li>
+            <li><strong>BICONDITIONAL ( ↔ )</strong> - If and only if</li>
+        </ul>
+
+        <h3>Well-Formed Formulas</h3>
+        <p>A well-formed formula (WFF) is a string of symbols that is grammatically (syntactically) correct according to the rules of the logical language.</p>
+
+        <h3>Truth Tables</h3>
+        <p>Truth tables are used to determine the truth value of a compound statement for every possible truth value of its component statements.</p>
+
+        <h3>Tautology</h3>
+        <p>A tautology is a compound statement that is always true, regardless of the truth values of the individual statements.</p>
+
+        <h3>Equivalence and Implication</h3>
+        <ul>
+            <li><strong>Logical Equivalence ( ≡ )</strong> means two statements always have the same truth value.</li>
+            <li><strong>Implication ( → )</strong> states that if one statement is true, then another is also true.</li>
+        </ul>
+
+        <h3>Normal Forms</h3>
+        <p>
+            Statements can be expressed in specific standard forms:
+        </p>
+        <ul>
+            <li><strong>Conjunctive Normal Form (CNF)</strong> - a conjunction of disjunctions</li>
+            <li><strong>Disjunctive Normal Form (DNF)</strong> - a disjunction of conjunctions</li>
+        </ul>
+
+    </section>
+
+    <section>
+        <h2>Predicates</h2>
+
+        <h3>Predicative Logic</h3>
+        <p>Predicative logic extends propositional logic by dealing with predicates and quantifiers. A predicate is a statement that contains variables.</p>
+        <p>Example: <code>P(x): x is greater than 5</code>.</p>
+
+        <h3>Free and Bound Variables</h3>
+        <ul>
+            <li><strong>Free variable</strong>: A variable not bound by a quantifier.</li>
+            <li><strong>Bound variable</strong>: A variable that is quantified (using ∀ or ∃).</li>
+        </ul>
+
+        <h3>Rules of Inference</h3>
+        <p>Rules of inference are the logical rules that dictate the valid steps from premises to conclusions:</p>
+        <ul>
+            <li>Modus Ponens: If <code>p → q</code> and <code>p</code> are true, then <code>q</code> is true.</li>
+            <li>Modus Tollens: If <code>p → q</code> and <code>¬q</code> are true, then <code>¬p</code> is true.</li>
+            <li>Hypothetical Syllogism: If <code>p → q</code> and <code>q → r</code> are true, then <code>p → r</code> is true.</li>
+        </ul>
+
+        <h3>Consistency</h3>
+        <p>A set of statements is consistent if there is no contradiction among them. If all statements can be true simultaneously, they are consistent.</p>
+
+        <h3>Proof by Contradiction</h3>
+        <p>In proof by contradiction, we assume the negation of what we want to prove. If this leads to a contradiction, then the original statement must be true.</p>
+
+        <pre>
+Example:
+To prove: √2 is irrational
+Assume: √2 is rational (can be expressed as p/q)
+Derive contradiction → Hence √2 is irrational.
+        </pre>
+
+    </section>
+
+</body>
+</html>

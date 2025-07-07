@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit II: Classes, Inheritance, and Polymorphism</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.7;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>UNIT II: Classes, Inheritance, and Polymorphism</h1>
+
+    <section>
+        <h2>Classes and Objects</h2>
+
+        <h3>Classes</h3>
+        <p>A class is a blueprint for creating objects. It defines properties (attributes) and methods (functions).</p>
+
+        <h3>Objects</h3>
+        <p>Objects are instances of classes. They contain real data and can perform actions defined by their methods.</p>
+
+        <h3>Creating Objects</h3>
+        <pre>
+ClassName obj = new ClassName();
+        </pre>
+
+        <h3>Methods</h3>
+        <p>Methods define the behavior of objects and can perform operations or return values.</p>
+
+        <h3>Constructors</h3>
+        <p>Constructors are special methods used to initialize new objects.</p>
+
+        <h4>Constructor Overloading</h4>
+        <p>Having multiple constructors with different parameters.</p>
+
+        <h4>Garbage Collector</h4>
+        <p>Java automatically destroys unused objects to free up memory using a process called Garbage Collection.</p>
+
+        <h3>Class Variables and Methods (Static Keyword)</h3>
+        <p>When a variable or method is declared as <code>static</code>, it belongs to the class rather than instances.</p>
+
+        <h3>this Keyword</h3>
+        <p>The <code>this</code> keyword refers to the current object within an instance method or constructor.</p>
+
+        <h3>Arrays</h3>
+        <p>Arrays are data structures that store multiple values of the same type.</p>
+        <pre>
+int[] numbers = new int[5];
+        </pre>
+
+        <h3>Command Line Arguments</h3>
+        <p>Command-line arguments are passed to the main method and can be accessed via the <code>args[]</code> array.</p>
+
+        <h3>Nested Classes</h3>
+        <p>Classes defined within another class are called nested classes. They help in logically grouping classes.</p>
+    </section>
+
+    <section>
+        <h2>Strings in Java</h2>
+
+        <h3>String</h3>
+        <p>Immutable sequence of characters.</p>
+
+        <h3>StringBuffer</h3>
+        <p>Mutable sequence of characters; used when frequent modifications are required.</p>
+
+        <h3>StringTokenizer</h3>
+        <p>Used to split strings into tokens based on delimiters.</p>
+
+        <pre>
+import java.util.StringTokenizer;
+
+StringTokenizer st = new StringTokenizer("Hello World", " ");
+while (st.hasMoreTokens()) {
+    System.out.println(st.nextToken());
+}
+        </pre>
+    </section>
+
+    <section>
+        <h2>Inheritance and Polymorphism</h2>
+
+        <h3>Types of Inheritance</h3>
+        <ul>
+            <li>Single Inheritance</li>
+            <li>Multilevel Inheritance</li>
+            <li>Hierarchical Inheritance</li>
+            <li>Multiple Inheritance (via interfaces)</li>
+        </ul>
+
+        <h3>Deriving Classes using extends Keyword</h3>
+        <p>The <code>extends</code> keyword is used to create a subclass from a superclass.</p>
+
+        <pre>
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog barks");
+    }
+}
+        </pre>
+
+        <h3>super Keyword</h3>
+        <p>Used to refer to the parent class’s methods or constructors.</p>
+
+        <pre>
+super.methodName();
+super(parameterList);
+        </pre>
+
+        <h3>Polymorphism</h3>
+        <p>Polymorphism allows objects to be treated as instances of their parent class rather than their actual class.</p>
+
+        <h4>Method Overloading</h4>
+        <p>Same method name with different parameter lists within the same class.</p>
+
+        <h4>Method Overriding</h4>
+        <p>Subclass provides a specific implementation of a method declared in its superclass.</p>
+
+        <pre>
+class Animal {
+    void sound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+        </pre>
+
+        <h3>final Keyword</h3>
+        <p>The <code>final</code> keyword is used to:
+        <ul>
+            <li>Declare constants</li>
+            <li>Prevent method overriding</li>
+            <li>Prevent inheritance</li>
+        </ul></p>
+
+        <h3>Abstract Classes</h3>
+        <p>An abstract class cannot be instantiated and can contain abstract methods (methods without a body).</p>
+
+        <pre>
+abstract class Animal {
+    abstract void sound();
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+        </pre>
+    </section>
+
+</body>
+</html>

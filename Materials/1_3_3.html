@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions and String Handling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Functions: The Building Blocks of Structured Programming</h1>
+    <p>Functions are self-contained blocks of code that perform a specific task. They are a cornerstone of structured programming, promoting code reusability, modularity, and maintainability.</p>
+
+    <h2>Key Concepts:</h2>
+
+    <h3>Definition:</h3>
+    <p>A function is a named block of code that performs a specific task.</p>
+
+    <h3>Purpose:</h3>
+    <ul>
+        <li><strong>Reusability:</strong> Write once, use multiple times.</li>
+        <li><strong>Modularity:</strong> Break down complex tasks into smaller, manageable units.</li>
+        <li><strong>Abstraction:</strong> Hide implementation details from the user.</li>
+    </ul>
+
+    <h3>Components:</h3>
+    <ul>
+        <li><strong>Function Signature:</strong> Includes the function name, return type, and parameters.</li>
+        <li><strong>Parameters:</strong> Input values passed to the function.</li>
+        <li><strong>Return Type:</strong> The type of value the function returns.</li>
+        <li><strong>Function Body:</strong> The code that performs the task.</li>
+    </ul>
+
+    <h3>Example:</h3>
+    <p>Let's define a function to calculate the area of a rectangle:</p>
+    <pre><code>FUNCTION CalculateArea(length, width)
+  area = length * width
+  RETURN area
+ENDFUNCTION
+
+// Usage
+rectangleArea = CalculateArea(5, 10)
+DISPLAY rectangleArea  // Output: 50
+    </code></pre>
+
+    <p>In this example:</p>
+    <ul>
+        <li><code>CalculateArea</code> is the function name.</li>
+        <li><code>length</code> and <code>width</code> are the parameters.</li>
+        <li>The function returns the calculated area.</li>
+    </ul>
+
+    <h1>String Handling: Working with Text Data</h1>
+    <p>Strings are sequences of characters, and string handling involves various operations to manipulate and process text data.</p>
+
+    <h2>Common String Operations:</h2>
+    <ul>
+        <li><code>strlen()</code>: Returns the length of a string.</li>
+        <li><code>strcat()</code>: Concatenates (joins) two strings.</li>
+        <li><code>strcpy()</code>: Copies one string to another.</li>
+        <li><code>strcmp()</code>: Compares two strings.</li>
+        <li><code>substring()</code>: Extracts a portion of a string.</li>
+    </ul>
+
+    <h3>Examples:</h3>
+
+    <h4><code>strlen()</code>:</h4>
+    <pre><code>string = "Hello, World!"
+length = strlen(string)
+DISPLAY length  // Output: 13
+    </code></pre>
+
+    <h4><code>strcat()</code>:</h4>
+    <pre><code>string1 = "Hello, "
+string2 = "World!"
+result = strcat(string1, string2)
+DISPLAY result  // Output: "Hello, World!"
+    </code></pre>
+
+    <h4><code>strcpy()</code>:</h4>
+    <pre><code>string1 = "Hello"
+string2 = strcpy(string1)
+DISPLAY string2  // Output: "Hello"
+    </code></pre>
+
+    <h4><code>strcmp()</code>:</h4>
+    <pre><code>string1 = "Hello"
+string2 = "Hello"
+result = strcmp(string1, string2)
+IF result = 0 THEN
+  DISPLAY "Strings are equal"
+ELSE
+  DISPLAY "Strings are not equal"
+ENDIF
+// Output: "Strings are equal"
+    </code></pre>
+
+    <h4><code>substring()</code>:</h4>
+    <pre><code>string = "Hello, World!"
+sub = substring(string, 0, 5)  // Start at index 0, length 5
+DISPLAY sub  // Output: "Hello"
+    </code></pre>
+
+    <h2>Putting It All Together</h2>
+    <p>Functions and string handling are often used together to create powerful and flexible programs. For example, you might create a function that takes a string as input, performs some operations on it, and returns the modified string.</p>
+
+</body>
+</html>

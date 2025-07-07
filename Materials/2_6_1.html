@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Operating System Overview and Process Management</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 20px;
+      color: #333;
+      line-height: 1.7;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    section {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .example {
+      background: #eef7fa;
+      padding: 10px;
+      border-left: 4px solid #3498db;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+<h1>UNIT I: Operating System Overview and Process Management</h1>
+
+<section>
+  <h2>Operating System Overview</h2>
+
+  <h3>Objectives and Functions</h3>
+  <p>An Operating System (OS) acts as an intermediary between the user and computer hardware. Main objectives:</p>
+  <ul>
+    <li>Efficient management of resources (CPU, memory, I/O devices)</li>
+    <li>Providing a convenient user interface</li>
+    <li>Ensuring security and data integrity</li>
+    <li>Facilitating communication between applications and hardware</li>
+  </ul>
+
+  <h3>Computer System Architecture</h3>
+  <p>Architecture includes the CPU, memory, I/O devices, and storage systems. Types of architectures:</p>
+  <ul>
+    <li>Single-Processor Systems</li>
+    <li>Multiprocessor Systems (Parallel systems)</li>
+    <li>Clustered Systems</li>
+  </ul>
+
+  <h3>Evolution of Operating Systems</h3>
+  <ul>
+    <li>Early systems (Batch systems)</li>
+    <li>Multiprogramming Systems</li>
+    <li>Time-Sharing Systems</li>
+    <li>Distributed Systems</li>
+    <li>Modern Mobile and Cloud OS</li>
+  </ul>
+
+  <h3>System Services</h3>
+  <p>OS provides various services such as:</p>
+  <ul>
+    <li>Program execution</li>
+    <li>I/O operations</li>
+    <li>File system manipulation</li>
+    <li>Communication services</li>
+    <li>Error detection and security</li>
+  </ul>
+
+  <h3>System Calls</h3>
+  <p>System calls are the programming interface to the services provided by the OS. Example categories:</p>
+  <ul>
+    <li>Process control (e.g., fork, exec)</li>
+    <li>File management (e.g., open, close, read, write)</li>
+    <li>Device management</li>
+    <li>Information maintenance</li>
+    <li>Communication</li>
+  </ul>
+
+  <div class="example">
+    <strong>Example:</strong>  
+    <em>fork() - creates a new process in UNIX/Linux systems.</em>
+  </div>
+
+  <h3>System Programs</h3>
+  <p>System programs provide a convenient environment for program development and execution. Examples include compilers, assemblers, file manipulation programs, and system utilities.</p>
+
+  <h3>OS Structure</h3>
+  <p>Common OS Structures:</p>
+  <ul>
+    <li>Simple Structure (e.g., MS-DOS)</li>
+    <li>Layered Approach</li>
+    <li>Microkernel Systems</li>
+    <li>Modular Approach</li>
+  </ul>
+
+  <h3>Virtual Machines</h3>
+  <p>A virtual machine provides an abstraction of the computer hardware to multiple environments. Examples:</p>
+  <ul>
+    <li>VMware</li>
+    <li>VirtualBox</li>
+    <li>Hyper-V</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Process Management</h2>
+
+  <h3>Process Concepts</h3>
+  <p>A process is a program in execution, consisting of program code, data, and a set of resources. Key components:</p>
+  <ul>
+    <li>Process Control Block (PCB)</li>
+    <li>States: New, Ready, Running, Waiting, Terminated</li>
+  </ul>
+
+  <h3>CPU Scheduling</h3>
+  <p>CPU scheduling selects which process will be executed next on the CPU. Criteria include:</p>
+  <ul>
+    <li>CPU utilization</li>
+    <li>Throughput</li>
+    <li>Turnaround time</li>
+    <li>Waiting time</li>
+    <li>Response time</li>
+  </ul>
+
+  <h3>Scheduling Algorithms</h3>
+  <ul>
+    <li><strong>FCFS</strong> (First-Come, First-Served)</li>
+    <li><strong>SJF</strong> (Shortest Job First)</li>
+    <li><strong>Round Robin</strong></li>
+    <li><strong>Priority Scheduling</strong></li>
+    <li><strong>Multilevel Queue Scheduling</strong></li>
+  </ul>
+
+  <div class="example">
+    <strong>Example:</strong>  
+    <em>Round Robin Scheduling: Each process gets a small unit of CPU time (time quantum), and then moved to the back of the queue.</em>
+  </div>
+
+  <h3>Preemptive vs Non-Preemptive Scheduling</h3>
+  <ul>
+    <li><strong>Preemptive:</strong> A running process can be interrupted.</li>
+    <li><strong>Non-Preemptive:</strong> A running process cannot be interrupted until it finishes.</li>
+  </ul>
+
+  <h3>Threads</h3>
+  <p>Threads are the smallest sequence of programmed instructions that can be managed independently by a scheduler.</p>
+  <ul>
+    <li>Multithreading improves concurrency.</li>
+    <li>Multiple threads can exist within one process.</li>
+  </ul>
+
+  <h3>Multithreading Models</h3>
+  <ul>
+    <li><strong>Many-to-One Model:</strong> Many user-level threads map to one kernel thread.</li>
+    <li><strong>One-to-One Model:</strong> Each user-level thread maps to one kernel thread.</li>
+    <li><strong>Many-to-Many Model:</strong> Many user threads map to many kernel threads.</li>
+  </ul>
+
+</section>
+
+</body>
+</html>

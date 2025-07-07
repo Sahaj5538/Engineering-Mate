@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Algorithms in Artificial Intelligence</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 20px;
+            line-height: 1.7;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        section {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        ul {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Search Algorithms in Artificial Intelligence</h1>
+
+<section>
+    <h2>Introduction</h2>
+    <p>Search algorithms are fundamental techniques in Artificial Intelligence used for problem-solving and finding solutions in a structured manner. They explore a problem space to find the sequence of steps from an initial state to a goal state.</p>
+</section>
+
+<section>
+    <h2>Types of Search Algorithms</h2>
+
+    <h3>1. Uninformed Search (Blind Search)</h3>
+    <p>Uninformed search algorithms do not have any domain-specific knowledge; they only know how to traverse the tree.</p>
+
+    <h4>Examples:</h4>
+    <ul>
+        <li><strong>Breadth-First Search (BFS):</strong> Explores all nodes at the current depth before moving to the next level. Guarantees shortest path.</li>
+        <li><strong>Depth-First Search (DFS):</strong> Explores as far as possible along a branch before backtracking. May not find the shortest path.</li>
+        <li><strong>Uniform Cost Search:</strong> Expands the node with the lowest path cost. Guarantees optimal solution if path cost is non-decreasing.</li>
+        <li><strong>Depth-Limited Search:</strong> DFS with a predefined depth limit.</li>
+        <li><strong>Iterative Deepening Search:</strong> Repeated DFS with increasing depth limits.</li>
+    </ul>
+</section>
+
+<section>
+    <h3>2. Informed Search (Heuristic Search)</h3>
+    <p>Informed search algorithms use heuristics (problem-specific knowledge) to find solutions more efficiently.</p>
+
+    <h4>Examples:</h4>
+    <ul>
+        <li><strong>Greedy Best-First Search:</strong> Expands the node that appears closest to the goal using a heuristic function.</li>
+        <li><strong>A* Search:</strong> Combines the cost to reach a node and the estimated cost from the node to the goal (f(n) = g(n) + h(n)). It is both complete and optimal if the heuristic is admissible.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Comparison of Search Algorithms</h2>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>Algorithm</th>
+            <th>Completeness</th>
+            <th>Optimality</th>
+            <th>Time Complexity</th>
+            <th>Space Complexity</th>
+        </tr>
+        <tr>
+            <td>BFS</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>O(b<sup>d</sup>)</td>
+            <td>O(b<sup>d</sup>)</td>
+        </tr>
+        <tr>
+            <td>DFS</td>
+            <td>No</td>
+            <td>No</td>
+            <td>O(b<sup>m</sup>)</td>
+            <td>O(bm)</td>
+        </tr>
+        <tr>
+            <td>Uniform Cost Search</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>O(b<sup>1+C*/ε</sup>)</td>
+            <td>O(b<sup>1+C*/ε</sup>)</td>
+        </tr>
+        <tr>
+            <td>Greedy Best-First Search</td>
+            <td>No</td>
+            <td>No</td>
+            <td>O(b<sup>m</sup>)</td>
+            <td>O(bm)</td>
+        </tr>
+        <tr>
+            <td>A*</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>O(b<sup>d</sup>)</td>
+            <td>O(b<sup>d</sup>)</td>
+        </tr>
+    </table>
+</section>
+
+<section>
+    <h2>Applications of Search Algorithms</h2>
+    <ul>
+        <li>Pathfinding in maps and games (e.g., GPS navigation)</li>
+        <li>Solving puzzles like the 8-puzzle, Sudoku</li>
+        <li>Robot motion planning</li>
+        <li>Web crawling and search engines</li>
+        <li>Scheduling and planning problems</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Conclusion</h2>
+    <p>Search algorithms form the backbone of AI problem-solving. Selecting the right search algorithm depends on the problem constraints, like completeness, optimality, time, and space complexity.</p>
+</section>
+
+</body>
+</html>
